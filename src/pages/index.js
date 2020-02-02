@@ -173,6 +173,13 @@ export default function IndexPage() {
                 </div>
                 
             )            
+        } else {
+            return(
+                <div className="quote-output">
+                    <p></p>
+                    <h3></h3>
+                </div>
+            )
         }
     }
 
