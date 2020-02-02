@@ -13,7 +13,9 @@ export default function IndexPage() {
     
     function returnQuotes() {
         const random = getRandomInt(0,16);
+        console.log(random);
         if (random === 0) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“Better to remain silent and be thought a fool than to speak out and remove all doubt.”</p>
@@ -23,6 +25,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 1) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“Nobody realizes that some people expend tremendous energy merely to be normal.”</p>
@@ -32,6 +35,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 2) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“You only live once, but if you do it right, once is enough.”</p>
@@ -41,6 +45,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 3) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“Always forgive your enemies; nothing annoys them so much.”</p>
@@ -50,6 +55,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 4) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”</p>
@@ -59,6 +65,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 5) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“In three words I can sum up everything I've learned about life: it goes on.”</p>
@@ -68,6 +75,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 6) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“By the time a man realizes that his father was right, he has a son who thinks he’s wrong.”</p>
@@ -77,6 +85,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 7) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“Remember, today is the tomorrow you worried about yesterday.”</p>
@@ -86,6 +95,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 8) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“Never limit yourself because of others’ limited imagination; never limit others because of your own limited imagination.”</p>
@@ -95,6 +105,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 9) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“Criticism, like rain, should be gentle enough to nourish a man’s growth without destroying his roots.”</p>
@@ -104,6 +115,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 10) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“To err is human; to admit it, superhuman.”</p>
@@ -113,6 +125,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 11) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“A failure is like fertilizer; it stinks to be sure, but it makes things grow faster in the future.”</p>
@@ -122,6 +135,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 12) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“Originality is the fine art of remembering what you hear but forgetting where you heard it.”</p>
@@ -131,6 +145,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 13) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“In the end, we will remember not the words of our enemies, but the silence of our friends.”</p>
@@ -140,6 +155,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 14) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“Find a group of people who challenge and inspire you; spend a lot of time with them, and it will change your life.”</p>
@@ -149,6 +165,7 @@ export default function IndexPage() {
             )            
         }
         if (random === 15) {
+            console.log(random);
             return(
                 <div className="quote-output">
                     <p>“Once you have travelled, the voyage never ends, but is played out over and over again in the quietest chambers. The mind can never break off from the journey.”</p>
