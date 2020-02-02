@@ -1,21 +1,187 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import {Helmet} from "react-helmet"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
 
-export default IndexPage
+export default function IndexPage() {
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+      }
+    
+    function returnQuotes() {
+        const random = getRandomInt(0,16);
+        if (random === 0) {
+            return(
+                <div className="quote-output">
+                    <p>“Better to remain silent and be thought a fool than to speak out and remove all doubt.”</p>
+                    <h3>- Abraham Lincoln</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 1) {
+            return(
+                <div className="quote-output">
+                    <p>“Nobody realizes that some people expend tremendous energy merely to be normal.”</p>
+                    <h3>- Albert Camus</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 2) {
+            return(
+                <div className="quote-output">
+                    <p>“You only live once, but if you do it right, once is enough.”</p>
+                    <h3>- Mae West</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 3) {
+            return(
+                <div className="quote-output">
+                    <p>“Always forgive your enemies; nothing annoys them so much.”</p>
+                    <h3>- Oscar Wilde</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 4) {
+            return(
+                <div className="quote-output">
+                    <p>“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”</p>
+                    <h3>- Albert Einstein</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 5) {
+            return(
+                <div className="quote-output">
+                    <p>“In three words I can sum up everything I've learned about life: it goes on.”</p>
+                    <h3>- Robert Frost</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 6) {
+            return(
+                <div className="quote-output">
+                    <p>“By the time a man realizes that his father was right, he has a son who thinks he’s wrong.”</p>
+                    <h3>- Charles Wadsworth</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 7) {
+            return(
+                <div className="quote-output">
+                    <p>“Remember, today is the tomorrow you worried about yesterday.”</p>
+                    <h3>- Dale Carnegie</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 8) {
+            return(
+                <div className="quote-output">
+                    <p>“Never limit yourself because of others’ limited imagination; never limit others because of your own limited imagination.”</p>
+                    <h3>- Mae Jemison</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 9) {
+            return(
+                <div className="quote-output">
+                    <p>“Criticism, like rain, should be gentle enough to nourish a man’s growth without destroying his roots.”</p>
+                    <h3>- Frank A. Clark</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 10) {
+            return(
+                <div className="quote-output">
+                    <p>“To err is human; to admit it, superhuman.”</p>
+                    <h3>- Doug Larsone</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 11) {
+            return(
+                <div className="quote-output">
+                    <p>“A failure is like fertilizer; it stinks to be sure, but it makes things grow faster in the future.”</p>
+                    <h3>- Denis Waitley</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 12) {
+            return(
+                <div className="quote-output">
+                    <p>“Originality is the fine art of remembering what you hear but forgetting where you heard it.”</p>
+                    <h3>- Laurence J. Peter</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 13) {
+            return(
+                <div className="quote-output">
+                    <p>“In the end, we will remember not the words of our enemies, but the silence of our friends.”</p>
+                    <h3>- Martin Luther King Jr.</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 14) {
+            return(
+                <div className="quote-output">
+                    <p>“Find a group of people who challenge and inspire you; spend a lot of time with them, and it will change your life.”</p>
+                    <h3>- Amy Poehler</h3>
+                </div>
+                
+            )            
+        }
+        if (random === 15) {
+            return(
+                <div className="quote-output">
+                    <p>“Once you have travelled, the voyage never ends, but is played out over and over again in the quietest chambers. The mind can never break off from the journey.”</p>
+                    <h3>- Pat Conroy</h3>
+                </div>
+                
+            )            
+        }
+    }
+
+    return (
+        <div>
+            <Helmet>
+                <title>Coming Soon | raharditya.com</title>
+                <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet"></link>
+            </Helmet>
+
+            <div className="content-wrapper">
+                <header>
+                    <h1>Adit Raharditya</h1>
+                </header>
+
+                <div className="content">
+                    <div className="content-quote">
+                        {returnQuotes()}
+                    </div>
+
+                    <div className="content-message">
+                        <p>Website coming<br/><span>real</span> soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
