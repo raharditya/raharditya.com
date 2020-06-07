@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+html {
+  background-color: #001e27;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content-wrapper {
+  width: 70%;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+header {
+  height: 10vh;
+  display: grid;
+  align-items: center;
+}
+
+header h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  margin: 0;
+  color: #ed6363;
+}
+
+.content {
+  height: 90vh;
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.content-quote {
+  height: 75%;
+  display: grid;
+  align-content: center;
+  color: #3c6562;
+}
+
+.content-quote h3 {
+  text-align: end;
+  font-size: 1.3em;
+}
+
+.content-quote p {
+  font-size: 2em;
+}
+
+.content-message {
+  font-size: 1.5em;
+  color: #508f8f;
+}
+
+.content-message span {
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  header {
+    height: 20vh;
+  }
+  .content {
+    height: 80vh;
+    width: 90%;
+  }
+  header h1 {
+    text-align: center;
+    font-size: 1.7em;
+  }
+  .content-quote h3 {
+    font-size: 1.1em;
+  }
+  .content-quote p {
+    font-size: 1.7em;
+  }
+  .content-message p {
+    font-size: 1em;
   }
 }
