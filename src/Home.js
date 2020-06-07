@@ -8,7 +8,7 @@ export default function Home() {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-  const randInt = getRandomInt(1, 12);
+  const randInt = getRandomInt(0, 16);
   const quote = quotes[randInt];
 
   return (
