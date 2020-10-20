@@ -1,0 +1,21 @@
+$BG: #f5f0ef;
+$SEC-BG: #d9cfcb;
+$MAIN-ACCENT: #ff5851;
+$SEC-ACCENT: #414a6b;
+$DEFOCUSED-TEXT: #bebebe;
+$TEXT: #1c1b20;
+$GRAD-START: #fefefe;
+$GRAD-END: #d6d9cc;
+
+.home-header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hi {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+}

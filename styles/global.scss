@@ -1,0 +1,246 @@
+$BG: #f5f0ef;
+$SEC-BG: #d9cfcb;
+$MAIN-ACCENT: #ff5851;
+$SEC-ACCENT: #414a6b;
+$DEFOCUSED-TEXT: #bebebe;
+$TEXT: #1c1b20;
+$GRAD-START: #fefefe;
+$GRAD-END: #d6d9cc;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: $BG;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.padding-both {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+nav {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+
+  h3 {
+    font-size: 2rem;
+    color: $MAIN-ACCENT;
+    font-weight: 800;
+  }
+
+  .menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .burger {
+    div {
+      height: 4px;
+      background-color: $TEXT;
+      border-radius: 10px;
+      margin: 3px 0;
+    }
+
+    .line1 {
+      width: 30px;
+    }
+
+    .line2 {
+      width: 26px;
+    }
+  }
+}
+
+.project-container {
+  width: 80%;
+  margin: auto;
+  position: relative;
+
+  .project-nav {
+    display: flex;
+    position: fixed;
+    width: 80%;
+    // left: 0;
+    // right: 0;
+    height: 100%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 30;
+
+    div {
+      width: 4rem;
+      height: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 500ms ease;
+
+      &:hover {
+        background-color: $DEFOCUSED-TEXT;
+      }
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+  .items-container {
+    position: relative;
+    height: 100vh;
+
+    .project-item {
+      margin-top: 12vh;
+      padding: 0 8rem;
+      padding-bottom: 4rem;
+      position: absolute;
+
+      .item-thumbnail img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.144);
+      }
+
+      .item-title {
+        font-size: 2rem;
+        margin-bottom: 0;
+      }
+
+      .item-tags {
+        margin-bottom: 2rem;
+
+        small {
+          display: inline-block;
+          padding: 7px 15px;
+          margin-right: 0.8rem;
+          border-radius: 25px;
+          background-color: $MAIN-ACCENT;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .project-container {
+    width: 95%;
+
+    .project-nav {
+      width: 95%;
+      div {
+        width: 4rem;
+      }
+    }
+
+    .items-container {
+      .project-item {
+        padding: 0 5rem 4rem 5rem;
+      }
+    }
+  }
+}
+
+// OLD
+
+.home-header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .header-hi {
+    border-radius: 50%;
+    flex: 1;
+    text-align: center;
+
+    h1 {
+      font-size: 8rem;
+      position: relative;
+      z-index: 2;
+      font-weight: 800;
+
+      span {
+        color: $MAIN-ACCENT;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: $GRAD-END;
+        background: linear-gradient(135deg, $GRAD-START 0%, $GRAD-END 100%);
+        z-index: -1;
+      }
+    }
+  }
+
+  .header-name {
+    flex: 1;
+
+    .subtitle {
+      margin: 0;
+      color: $DEFOCUSED-TEXT;
+      font-size: 1.6rem;
+    }
+
+    .title {
+      margin-top: 0;
+      color: $MAIN-ACCENT;
+      font-size: 3.4rem;
+      line-height: 3.4rem;
+      font-weight: 800;
+    }
+
+    .main-cta {
+      display: flex;
+
+      a {
+        display: block;
+        padding: 8px 30px;
+        border-radius: 10px;
+      }
+
+      .cta-secondary {
+        border: 2px solid $MAIN-ACCENT;
+        margin-right: 1.7rem;
+      }
+
+      .cta-primary {
+        background-color: $MAIN-ACCENT;
+        color: white;
+      }
+    }
+  }
+}

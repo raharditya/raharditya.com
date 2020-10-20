@@ -7,11 +7,11 @@ function Nav(props) {
       <h3>RHDT</h3>
 
       <div className="menu">
-        <small>Menu</small>
+        {/* <small>Menu</small>
         <div className="burger">
           <div className="line1"></div>
           <div className="line2"></div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
