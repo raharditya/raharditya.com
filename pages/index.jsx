@@ -2,14 +2,15 @@ import Head from "next/head";
 import ProjectItem from "../components/ProjectItem";
 import ProjectNavigation from "../components/ProjectNavigation";
 import { motion } from "framer-motion";
+import data from "../data";
 
-export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/data");
-  const data = await res.json();
-  return { props: { data } };
-}
+// export async function getServerSideProps() {
+//   const res = await fetch("http://localhost:3000/api/data");
+//   const data = await res.json();
+//   return { props: { data } };
+// }
 
-export default function Home({ pos, setPos, data }) {
+export default function Home({ pos, setPos }) {
   const posInc = () => {
     if (pos == data.length - 1) {
       return setPos(0);
