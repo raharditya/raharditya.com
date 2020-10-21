@@ -160,19 +160,35 @@ nav {
 }
 
 @media screen and (max-width: 900px) {
+  .padding-both {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  nav {
+    background-color: #00000042;
+    height: 9vh;
+    h3 {
+      color: white;
+    }
+  }
   .project-container {
     width: 95%;
 
     .project-nav {
       width: 95%;
       div {
-        width: 4rem;
+        width: 3rem;
       }
     }
 
     .items-container {
+      width: 70%;
       .project-item {
-        padding: 0 5rem 4rem 5rem;
+        // padding: 0 5rem 4rem 5rem;
+        // width: 70%;
+        .item-thumbnail img {
+          height: 180px;
+        }
       }
     }
   }
