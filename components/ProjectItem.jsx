@@ -35,6 +35,18 @@ function ProjectItem(props) {
         {props.data.title}
       </motion.h2>
 
+      <motion.small
+        initial={{ opacity: props.data.url !== "" ? 0 : 1 }}
+        animate={{ opacity: props.data.url !== "" ? 1 : 0 }}
+        transition={{
+          duration: 0.5,
+          delay: props.data.url !== "" ? 0.2 : 0,
+        }}
+        className="item-url"
+      >
+        {props.data.url}
+      </motion.small>
+
       <motion.div
         className="item-tags"
         initial={{ opacity: props.idx == props.pos ? 0 : 1 }}
