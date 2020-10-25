@@ -1,10 +1,9 @@
 import Nav from "../components/Nav";
-import "../styles/global.scss";
-import "../styles/Home.module.scss";
-import {useState} from 'react'
+import "../styles/tailwind.css";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {
-  const [pos, setPos] = useState(0)
+  const [pos, setPos] = useState(0);
 
   return (
     <>
