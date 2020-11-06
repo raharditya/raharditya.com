@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function HomeHeader(props) {
   return (
     <header className="h-screen bg-gray-200">
-      <div className="container mx-auto flex h-full items-center">
+      <div className="container px-6 mx-auto flex h-full items-center">
         <div className="w-1/2">
           <h1 className="font-bold text-5xl leading-none mb-4">
             Adit
