@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function Nav(props) {
   return (
     <nav className="w-full h-16 bg-gray-200 flex items-center">
-      <div className="flex justify-between items-center container mx-auto">
+      <div className="flex justify-between items-center container md:px-8 mx-auto">
         <h3 className="font-extrabold text-2xl text-red-500">
           <Link href="/">
             <a>RHDT</a>
