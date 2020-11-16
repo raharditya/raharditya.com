@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 function StackItem(props) {
   return (
-    <div className="rounded-lg bg-orange-200 center-align p-4">
-      <img src={props.img} alt="" />
+    <div className="rounded-xl bg-orange-200 text-center py-8 w-sm bg-orange-300">
+      <img src={props.img} alt="" className="mb-4 text-center inline-block" />
       <p>{props.stack}</p>
     </div>
   );
