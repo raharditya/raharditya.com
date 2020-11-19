@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function StackItem(props) {
   return (
-    <div className="rounded-xl bg-orange-200 text-center py-8 w-sm bg-orange-300">
+    <div className="rounded-xl bg-orange-200 text-center py-8 w-4/5 bg-orange-300">
       <img src={props.img} alt="" className="mb-4 text-center inline-block" />
       <p>{props.stack}</p>
     </div>
