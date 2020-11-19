@@ -2,9 +2,10 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import data from "../data";
 import HomeHeader from "../components/HomeHeader";
-import HomeSkills from "../components/HomeSkills";
-import HomeStack from "../components/HomeStack";
+import HomeSkills from "../components/containers/HomeSkills";
+import HomeStack from "../components/containers/HomeStack";
 import Invitation from "../components/Invitation";
+import CodeType from "../components/CodeType";
 
 export default function Home({ pos, setPos }) {
   return (
@@ -15,11 +16,12 @@ export default function Home({ pos, setPos }) {
       </Head>
 
       <div className="project-container">
-        <HomeHeader />
+        {/* <HomeHeader />
         <HomeSkills />
         <HomeStack />
 
-        <Invitation />
+        <Invitation /> */}
+        <CodeType />
       </div>
     </div>
   );

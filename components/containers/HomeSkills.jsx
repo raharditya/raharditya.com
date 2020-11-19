@@ -1,6 +1,6 @@
 import React from "react";
-import SkillItem from "./SkillItem";
-import SkillIcon from "./SkillIcon";
+import SkillItem from "../SkillItem";
+import SkillIcon from "../SkillIcon";
 
 export default function HomeSkills() {
   return (

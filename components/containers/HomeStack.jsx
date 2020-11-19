@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import StackItem from "./StackItem";
+import StackItem from "../StackItem";
 
 function HomeStack(props) {
   return (
