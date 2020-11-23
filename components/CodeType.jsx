@@ -1,5 +1,6 @@
 import React from "react";
 import Typist from "react-typist";
+import CodeLine from "./CodeLine";
 
 export default function CodeType() {
   return (
@@ -13,42 +14,47 @@ export default function CodeType() {
           <code style={{ display: "block" }}>this is</code>
           <code>multiline example</code>
         </Typist> */}
-        <div className="w-full flex items-center">
-          <div className="w-8  text-center text-sm">1</div>
-          <code className="pl-4">{`import React from "react";`}</code>
-        </div>
-        <div className="w-full flex items-center">
-          <div className="w-8  text-center text-sm">2</div>
-          <code className="pl-4">{""}</code>
-        </div>
-        <div className="w-full flex items-center">
-          <div className="w-8  text-center text-sm">3</div>
-          <code className="pl-4">{"export default function Test() {"}</code>
-        </div>
-        <div className="w-full  flex items-center">
-          <div className="w-8 text-center text-sm">4</div>
-          <code className="pl-4">&nbsp;&nbsp;return (</code>
-        </div>
-        <div className="w-full bg-gray-800  flex items-center">
-          <div className="w-8 text-center text-sm">5</div>
-          <code className="pl-4">
-            &nbsp;&nbsp;&nbsp;&nbsp;{"<h1>Hi world!</h1>"}
-          </code>
-        </div>
-        <div className="w-full  flex items-center">
-          <div className="w-8 text-center text-sm">6</div>
-          <code className="pl-4">
-            &nbsp;&nbsp;&nbsp;&nbsp;{"<p>This is just a test.</p>"}
-          </code>
-        </div>
-        <div className="w-full  flex items-center">
-          <div className="w-8 text-center text-sm">7</div>
-          <code className="pl-4">&nbsp;&nbsp;);</code>
-        </div>
-        <div className="w-full  flex items-center">
-          <div className="w-8 text-center text-sm">8</div>
-          <code className="pl-4">{"}"}</code>
-        </div>
+        <Typist>
+          <CodeLine indent={1} line={3}>
+            {`import React from "react";`}
+          </CodeLine>
+          <div className="w-full flex items-center">
+            <div className="w-8  text-center text-sm">1</div>
+            <code className="pl-4">{`import React from "react";`}</code>
+          </div>
+          <div className="w-full flex items-center">
+            <div className="w-8  text-center text-sm">2</div>
+            <code className="pl-4">{""}</code>
+          </div>
+          <div className="w-full flex items-center">
+            <div className="w-8  text-center text-sm">3</div>
+            <code className="pl-4">{"export default function Test() {"}</code>
+          </div>
+          <div className="w-full  flex items-center">
+            <div className="w-8 text-center text-sm">4</div>
+            <code className="pl-4">&nbsp;&nbsp;return (</code>
+          </div>
+          <div className="w-full bg-gray-800  flex items-center">
+            <div className="w-8 text-center text-sm">5</div>
+            <code className="pl-4">
+              &nbsp;&nbsp;&nbsp;&nbsp;{"<h1>Hi world!</h1>"}
+            </code>
+          </div>
+          <div className="w-full  flex items-center">
+            <div className="w-8 text-center text-sm">6</div>
+            <code className="pl-4">
+              &nbsp;&nbsp;&nbsp;&nbsp;{"<p>This is just a test.</p>"}
+            </code>
+          </div>
+          <div className="w-full  flex items-center">
+            <div className="w-8 text-center text-sm">7</div>
+            <code className="pl-4">&nbsp;&nbsp;);</code>
+          </div>
+          <div className="w-full  flex items-center">
+            <div className="w-8 text-center text-sm">8</div>
+            <code className="pl-4">{"}"}</code>
+          </div>
+        </Typist>
       </div>
     </div>
   );
