@@ -9,7 +9,7 @@ function HomeStack(props) {
 
       <p className="text-center mb-4">Front-end</p>
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="flex gap-16 justify-center">
         <StackItem img="/assets/techstack/fe-js.svg" stack="Javascript" />
         <StackItem img="/assets/techstack/fe-react.svg" stack="React JS" />
         <StackItem img="/assets/techstack/fe-sass.svg" stack="Sass" />
@@ -20,7 +20,7 @@ function HomeStack(props) {
       </div>
 
       <p className="text-center mt-8 mb-4">Back-end</p>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="flex gap-16 justify-center">
         <StackItem img="/assets/techstack/be-node.svg" stack="NodeJS" />
         <StackItem img="/assets/techstack/be-mongo.svg" stack="MongoDB" />
         <StackItem img="/assets/techstack/be-express.svg" stack="Express" />
