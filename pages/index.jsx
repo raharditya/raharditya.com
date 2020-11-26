@@ -16,12 +16,12 @@ export default function Home({ pos, setPos }) {
       </Head>
 
       <div className="project-container">
-        {/* <HomeHeader />
+        <HomeHeader />
         <HomeSkills />
         <HomeStack />
 
-        <Invitation /> */}
-        <CodeType />
+        <Invitation />
+        {/* <CodeType /> */}
       </div>
     </div>
   );
