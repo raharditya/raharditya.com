@@ -24,7 +24,7 @@ function HomeHeader(props) {
               </a>
             </Link>
             <Link href="/contact-me">
-              <a className="cta-primary py-2 px-3 rounded-lg bg-red-500 text-white">
+              <a className="cta-primary py-2 px-3 rounded-lg text-white">
                 Contact Me!
               </a>
             </Link>
