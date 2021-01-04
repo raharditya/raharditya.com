@@ -6,12 +6,10 @@ import "../styles/global.scss";
 import Footer from "../components/containers/Footer";
 
 function MyApp({ Component, pageProps }) {
-  const [pos, setPos] = useState(0);
-
   return (
     <>
       <Nav />
-      <Component {...pageProps} pos={pos} setPos={setPos} />
+      <Component {...pageProps} />
       <Footer />
     </>
   );
