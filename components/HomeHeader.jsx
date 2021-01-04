@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import PropTypes from "prop-types";
 
 function HomeHeader(props) {
   return (
@@ -38,7 +37,5 @@ function HomeHeader(props) {
     </header>
   );
 }
-
-HomeHeader.propTypes = {};
 
 export default HomeHeader;
