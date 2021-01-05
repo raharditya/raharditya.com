@@ -1,18 +1,13 @@
 $BG: #f5f0ef;
-$MAIN-ACCENT: #d49a89;
-$SEC-ACCENT: #e2d9c5;
-$DEFOCUSED-TEXT: #bebebe;
-$TEXT: #1c1b20;
+$MAIN-ACCENT: #f7f2e7;
+$SEC-ACCENT: #71638e;
+$DEFOCUSED-TEXT: #858181;
+$SECTION-HEADING: #4f4564;
+$TEXT-BLACK: #373232;
+$NAV-DESELECTED: #5f5f5f;
+$PROJECT-TITLE: #514949;
 
-$SKILL1: #f4f7ff;
-$SKILL2: #fcf8f5;
-$SKILL3: #ffeeee;
-
-$ICON1: #e3e4e9;
-$ICON2: #ece5e0;
-$ICON3: #e1d4d4;
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;700&display=swap");
 
 html,
 body {
@@ -20,6 +15,26 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   // background-color: $BG;
+}
+
+.text-heading-serif {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+.text-heading-sans {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.text-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.text-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 a {
@@ -47,7 +62,7 @@ nav {
 
   h3 {
     font-size: 2rem;
-    color: $MAIN-ACCENT;
+    color: $SEC-ACCENT;
     font-weight: 800;
   }
 
@@ -60,7 +75,7 @@ nav {
   .burger {
     div {
       height: 4px;
-      background-color: $TEXT;
+      background-color: $TEXT-BLACK;
       border-radius: 10px;
       margin: 3px 0;
     }
@@ -73,59 +88,18 @@ nav {
       width: 26px;
     }
   }
-}
 
-.skill-1 {
-  background-color: $SKILL1;
-}
-
-.skill-2 {
-  background-color: $SKILL2;
-}
-
-.skill-3 {
-  background-color: $SKILL3;
-}
-
-.skill-icon {
-  height: 2.3rem;
-  width: 2.3rem;
-  text-align: center;
-  padding: 3px;
-
-  img {
-    width: 80%;
-    margin: auto;
+  .li {
+    color: $NAV-DESELECTED;
   }
-}
 
-.icon-1 {
-  background-color: $ICON1;
-}
-
-.icon-2 {
-  background-color: $ICON2;
-}
-
-.icon-3 {
-  background-color: $ICON3;
-}
-
-.stack-item {
-  background-color: $SKILL3;
-
-  img {
-    max-height: 2rem;
+  .active {
+    font-weight: 700;
+    color: $SEC-ACCENT;
   }
-}
-
-.home-invitation {
-  background-color: $SKILL2;
 }
 
 footer {
-  background-color: $SKILL2;
-
   .social-link {
     background-color: #f6ece4;
   }
