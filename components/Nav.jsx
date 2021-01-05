@@ -6,24 +6,31 @@ function Nav(props) {
   return (
     <nav className="w-full h-16 bg-gray-200 flex items-center">
       <div className="flex justify-between items-center container md:px-8 mx-auto">
-        <h3 className="font-extrabold text-2xl text-red-500">
+        <h3 className="text-heading-serif text-2xl">
           <Link href="/">
-            <a>RHDT</a>
+            <a>Raharditya</a>
           </Link>
         </h3>
 
-        <ul>
+        <ul className="flex items-center gap-12">
           <li>
             <Link href="/">
-              <a className="text-sm mr-4">Home</a>
+              <a className="active text-light text-sm">Home</a>
             </Link>
-
+          </li>
+          <li>
             <Link href="#projects">
-              <a className="text-sm mr-4">Projects</a>
+              <a className="text-light text-sm">Projects</a>
             </Link>
-
+          </li>
+          <li>
+            <Link href="/about">
+              <a className="text-light text-sm">About</a>
+            </Link>
+          </li>
+          <li>
             <Link href="/contact">
-              <a className="text-sm mr-4">Contact Me</a>
+              <a className="text-light text-sm">Contact Me</a>
             </Link>
           </li>
         </ul>
