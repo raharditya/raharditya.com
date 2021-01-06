@@ -1,4 +1,4 @@
-$BG: #f5f0ef;
+$BG: #fcfcfd;
 $MAIN-ACCENT: #f7f2e7;
 $SEC-ACCENT: #71638e;
 $DEFOCUSED-TEXT: #858181;
@@ -7,6 +7,15 @@ $TEXT-BLACK: #373232;
 $NAV-DESELECTED: #5f5f5f;
 $PROJECT-TITLE: #514949;
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;700&display=swap");
 
 html,
@@ -14,12 +23,16 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
-  // background-color: $BG;
+  background-color: $BG;
 }
 
 .text-heading-serif {
   font-family: "Playfair Display", serif;
   font-weight: 700;
+}
+
+.text-hero {
+  color: $SEC-ACCENT;
 }
 
 .text-heading-sans {
@@ -37,13 +50,49 @@ body {
   font-weight: 400;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.text-hero-1 {
+  top: -3.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
-* {
-  box-sizing: border-box;
+.text-hero-2 {
+  top: -0.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+}
+
+.text-black {
+  color: $TEXT-BLACK;
+}
+
+.text-defocused {
+  color: $DEFOCUSED-TEXT;
+}
+
+.section-heading {
+  color: $SECTION-HEADING;
+}
+
+.nav-deselected {
+  color: $NAV-DESELECTED;
+}
+
+.prj-title {
+  color: $PROJECT-TITLE;
+}
+
+.backdrop {
+  background-color: $MAIN-ACCENT;
+}
+
+.invitation-bg {
+  background-image: url("/assets/invitation.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .cta-primary {
@@ -60,8 +109,8 @@ nav {
   align-items: center;
   z-index: 99;
 
-  h3 {
-    font-size: 2rem;
+  h3 > a {
+    // font-size: 2rem;
     color: $SEC-ACCENT;
     font-weight: 800;
   }
@@ -75,8 +124,8 @@ nav {
   .burger {
     div {
       height: 4px;
-      background-color: $TEXT-BLACK;
-      border-radius: 10px;
+      background-color: $SEC-ACCENT;
+      border-radius: 15px;
       margin: 3px 0;
     }
 
@@ -99,19 +148,9 @@ nav {
   }
 }
 
-footer {
-  .social-link {
-    background-color: #f6ece4;
-  }
-
-  .last-update {
-    background-color: #f6ece4;
-  }
-}
-
 @media screen and (max-width: 900px) {
   nav {
-    background-color: #00000042;
+    // background-color: #00000042;
     height: 9vh;
     h3 {
       color: white;
