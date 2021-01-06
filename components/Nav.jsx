@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function Nav(props) {
   return (
-    <nav className="w-full h-16 bg-gray-200 flex items-center">
+    <nav className="w-full px-6 md:px-0 h-16 flex items-center">
       <div className="flex justify-between items-center container md:px-8 mx-auto">
         <h3 className="text-heading-serif text-2xl">
           <Link href="/">
@@ -12,7 +12,7 @@ function Nav(props) {
           </Link>
         </h3>
 
-        <ul className="flex items-center gap-12">
+        <ul className="items-center gap-12 hidden md:flex">
           <li>
             <Link href="/">
               <a className="active text-light text-sm">Home</a>
