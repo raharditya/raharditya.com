@@ -7,7 +7,8 @@ function ProjectItem(props) {
       <img
         src={props.img}
         alt=""
-        className="rounded-xl w-full md:mr-4 md:w-32"
+        className="rounded-xl w-full h-48 md:mr-4 md:w-32"
+        style={{ objectFit: "cover", objectPosition: "center" }}
       />
 
       <div className="flex justify-between items-center">
