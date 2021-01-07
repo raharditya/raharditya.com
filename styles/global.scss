@@ -3,9 +3,11 @@ $MAIN-ACCENT: #f7f2e7;
 $SEC-ACCENT: #71638e;
 $DEFOCUSED-TEXT: #858181;
 $SECTION-HEADING: #4f4564;
+$PAGE-HEADING: #557571;
 $TEXT-BLACK: #373232;
 $NAV-DESELECTED: #5f5f5f;
 $PROJECT-TITLE: #514949;
+$SOCIAL-BG: #f1e4da;
 
 a {
   color: inherit;
@@ -76,6 +78,10 @@ body {
   color: $SECTION-HEADING;
 }
 
+.page-heading {
+  color: $PAGE-HEADING;
+}
+
 .nav-deselected {
   color: $NAV-DESELECTED;
 }
@@ -88,6 +94,10 @@ body {
   background-color: $MAIN-ACCENT;
 }
 
+.social {
+  background-color: $SOCIAL-BG;
+}
+
 .invitation-bg {
   background-image: url("/assets/invitation.svg");
   background-repeat: no-repeat;
@@ -97,6 +107,10 @@ body {
 
 .cta-primary {
   background-color: $MAIN-ACCENT;
+}
+
+.custom-shadow {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.247);
 }
 
 nav {
@@ -130,7 +144,7 @@ nav {
     }
 
     .line1 {
-      width: 30px;
+      width: 26px;
     }
 
     .line2 {
