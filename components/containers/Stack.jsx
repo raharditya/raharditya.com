@@ -7,7 +7,7 @@ function Stack(props) {
         What I do
       </h3>
 
-      <div className="md:flex md:justify-around md:items-center">
+      <div className="md:flex md:justify-center md:items-center md:gap-32">
         <StackItem img="/assets/stack/pwa.svg">
           Progressive
           <br />

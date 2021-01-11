@@ -7,19 +7,19 @@ function ProjectItem(props) {
       <img
         src={props.img}
         alt=""
-        className="rounded-xl w-full h-48 md:mr-4 md:w-32"
+        className="rounded-xl w-full h-48 md:mr-6 md:w-64"
         style={{ objectFit: "cover", objectPosition: "center" }}
       />
 
-      <div className="flex justify-between items-center">
-        <div className="prj-title flex-grow mt-3 md:mt-0">
+      <div className="flex justify-between items-center md:w-full">
+        <div className="prj-title flex-grow mt-3 md:mt-0 md:self-start">
           <small className="text-light text-defocused">{props.category}</small>
-          <h2 className="text-heading-sans text-2xl prj-title">
+          <h2 className="text-heading-sans text-2xl md:text-3xl prj-title">
             {props.children}
           </h2>
         </div>
 
-        <div className="prj-cta px-4 border-l h-full">
+        <div className="prj-cta px-4 border-l h-full flex items-center">
           <img src="/assets/next.svg" alt="" className="w-6" />
         </div>
       </div>
