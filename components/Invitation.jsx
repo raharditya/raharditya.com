@@ -1,12 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import { useMediaQuery } from "./useMediaQuery";
 
 export default function Invitation() {
+  const isDesktop = useMediaQuery("(max-width: 768px)");
+
   return (
-    <div className="invitation text-center mb-12 md:flex">
+    <div className="invitation text-center mb-12 md:flex md:mt-12">
       <div
-        className="invitation-bg text-white text-heading-serif text-3xl flex items-center justify-center"
-        style={{ height: 280 }}
+        className="invitation-bg text-white text-heading-serif text-3xl flex items-center justify-center md:flex-grow md:h-auto md:w-1/2"
+        style={{ height: isDesktop ? 280 : 400 }}
       >
         <h2>
           Let's work
@@ -14,7 +17,7 @@ export default function Invitation() {
           Together
         </h2>
       </div>
-      <div className="invitation-cta px-8 py-16">
+      <div className="invitation-cta px-8 py-16 md:flex-grow md:w-1/2 md:px-32">
         <p className="text-black">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
           tempor lorem non odio tincidunt.
