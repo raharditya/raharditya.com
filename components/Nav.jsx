@@ -19,7 +19,7 @@ function Nav(props) {
             </Link>
           </li>
           <li>
-            <Link href="#projects">
+            <Link href="/projects">
               <a className="text-light text-sm">Projects</a>
             </Link>
           </li>
@@ -29,7 +29,7 @@ function Nav(props) {
             </Link>
           </li>
           <li>
-            <Link href="/contact">
+            <Link href="/contact-me">
               <a className="text-light text-sm">Contact Me</a>
             </Link>
           </li>
