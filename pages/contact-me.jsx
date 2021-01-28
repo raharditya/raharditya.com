@@ -3,14 +3,14 @@ import Link from "next/link";
 function contactMe(props) {
   return (
     <div className="pt-24 flex flex-col md:flex-row">
-      <div className="">
+      <div className="w-1/2 ">
         <h2 className="px-6 text-heading-serif page-heading font-bold text-4xl">
           Contact
           <br />
           Me
         </h2>
 
-        <div className="backdrop py-16 w-full flex items-center justify-center -mt-6 md:flex-grow">
+        <div className="backdrop py-16 md:py-24 w-full flex items-center justify-center -mt-6 md:flex-grow">
           <div className="text-center">
             <p>I'm available at</p>
             <Link href="#">
@@ -46,9 +46,11 @@ function contactMe(props) {
         </div>
       </div>
 
-      <small className="my-10 px-6 text-center text-black">or</small>
+      <small className="my-10 px-6 text-center text-black md:self-center">
+        or
+      </small>
 
-      <form action="" className="px-6 md:flex-grow mb-10">
+      <form action="" className="px-6 md:flex-grow mb-10w-1/2 md:mr-32">
         <label htmlFor="name" className="block text-black font-semibold mb-4">
           Name
         </label>
