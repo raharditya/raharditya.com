@@ -74,6 +74,11 @@ body {
   color: $DEFOCUSED-TEXT;
 }
 
+.img-obj {
+  object-fit: cover;
+  object-position: center;
+}
+
 .section-heading {
   color: $SECTION-HEADING;
 }
