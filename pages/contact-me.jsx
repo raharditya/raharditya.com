@@ -1,6 +1,38 @@
 import Link from "next/link";
+import { useState } from "react";
 
 function contactMe(props) {
+  function formHandler(e) {
+    e.preventDefault();
+    console.log("this runs");
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+  }
+
+  function handleChange(field, body) {
+    const currForm = { ...form };
+    currForm[field] = body;
+    setForm(currForm);
+  }
+
+  const [form, setForm] = useState({
+    sender: "",
+    email: "",
+    msg: "",
+    error: false,
+    errorMsg: "",
+  });
+
   return (
     <div className="pt-24 flex flex-col md:flex-row">
       <div className="w-1/2 ">
@@ -57,6 +89,9 @@ function contactMe(props) {
         <input
           type="text"
           className="block custom-shadow w-full h-10 py-2 px-3 bg-white rounded-lg mb-8 focus:ring-2 focus:ring-red-200"
+          value={form.sender}
+          onChange={(e) => handleChange("sender", e.target.value)}
+          required
         />
 
         <label htmlFor="email" className="block text-black font-semibold mb-4">
@@ -65,6 +100,9 @@ function contactMe(props) {
         <input
           type="text"
           className="block custom-shadow w-full h-10 py-2 px-3 bg-white rounded-lg mb-8"
+          value={form.email}
+          onChange={(e) => handleChange("email", e.target.value)}
+          required
         />
 
         <label
@@ -77,13 +115,20 @@ function contactMe(props) {
           name="message"
           rows="4"
           className="w-full custom-shadow py-2 px-3 bg-white rounded-lg mb-8"
+          value={form.msg}
+          onChange={(e) => handleChange("msg", e.target.value)}
+          required
         ></textarea>
 
-        <input
-          type="submit"
-          value="Send"
+        <button
+          // type="submit"
+          // value="Send"
           className="block py-2 px-10 bg-red-500 rounded-xl mx-auto text-white font-semibold"
-        />
+          onClick={formHandler}
+          // onSubmit={(e) => formHandler(e)}
+        >
+          Send
+        </button>
       </form>
     </div>
   );
