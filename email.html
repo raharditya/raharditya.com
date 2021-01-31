@@ -54,7 +54,7 @@
         margin-top: 5px;
       }
 
-      a {
+      .reply-btn {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -63,11 +63,19 @@
         background-color: #ff8fb0;
         border-radius: 10px;
         color: white;
-        margin: 2rem auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
         text-decoration: none;
         font-weight: bold;
         font-size: 1.1rem;
         box-shadow: 3px 3px 10px rgba(68, 68, 68, 0.11);
+      }
+
+      .reply-container {
+        padding-top: 2rem;
+        max-width: 200px;
+        margin: auto;
       }
     </style>
   </head>
@@ -75,6 +83,7 @@
     <h2 class="text-heading-serif">Raharditya.com</h2>
     <p class="sub-heading">Contact Form</p>
 
+    <p>We have received a contact form submission with the following message</p>
     <div class="msg-container">
       <p>Sender: <span>Adit Raharditya</span></p>
       <p>Email: <span>raharditya@kognitif.id</span></p>
@@ -88,6 +97,8 @@
       </p>
     </div>
 
-    <a href="mailto:raharditya@kognitif.id">Reply</a>
+    <div class="reply-container">
+      <p>Please wait until your message is replied.</p>
+    </div>
   </body>
 </html>
