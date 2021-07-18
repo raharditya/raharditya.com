@@ -1,14 +1,57 @@
-import React from "react";
-import Link from "next/link";
-import { useMediaQuery } from "./useMediaQuery";
+import React from 'react'
+import Link from 'next/link'
+import { useMediaQuery } from './useMediaQuery'
 
 function HomeHeader(props) {
-  const isDesktop = useMediaQuery("(max-width: 768px)");
+  const isDesktop = useMediaQuery('(max-width: 768px)')
 
   return (
     <header className="h-screen">
       <div className="md:px-8 flex h-full items-center text-center relative overflow-hidden">
-        <div
+        <h1 className="header-title title-1 absolute">Adit</h1>
+        <h1 className="header-title title-2 absolute">Raharditya</h1>
+
+        <div className="header-cta-container p-4 absolute bg-white rounded-lg shadow-lg">
+          <div className="md:flex">
+            <Link href="/contact-me">
+              <a className="bg-gray-500 block w-full py-3 mb-4 rounded-md text-white">
+                Contact
+              </a>
+            </Link>
+
+            <div className="flex">
+              <a
+                href="https://instagram.com/a.raharditya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-gray-500 rounded-md mr-4"
+              >
+                <img
+                  src="/assets/social/instagram.svg"
+                  alt=""
+                  className="h-6"
+                />
+              </a>
+              <a
+                href="https://instagram.com/a.raharditya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-gray-500 rounded-md mr-4"
+              >
+                <img src="/assets/social/github.svg" alt="" className="h-6" />
+              </a>
+              <a
+                href="https://instagram.com/a.raharditya"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-gray-500 rounded-md"
+              >
+                <img src="/assets/social/linkedin.svg" alt="" className="h-6" />
+              </a>
+            </div>
+          </div>
+        </div>
+        {/* <div
           className="backdrop absolute left-0 right-0 bottom-0 w-full z-0"
           style={{
             height: isDesktop ? "48%" : "100%",
@@ -75,10 +118,10 @@ function HomeHeader(props) {
           <small className="text-defocused text-light mt-32 block relative z-10">
             Scroll
           </small>
-        </div>
+        </div> */}
       </div>
     </header>
-  );
+  )
 }
 
-export default HomeHeader;
+export default HomeHeader
