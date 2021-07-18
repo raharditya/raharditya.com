@@ -1,12 +1,13 @@
-$BG: #fcfcfd;
+$BG: #f8fbff;
 $MAIN-ACCENT: #f7f2e7;
 $SEC-ACCENT: #71638e;
-$DEFOCUSED-TEXT: #858181;
+$DEFOCUSED-TEXT: #796d93;
 $SECTION-HEADING: #4f4564;
 $PAGE-HEADING: #557571;
-$TEXT-BLACK: #373232;
+$TEXT-BLACK: #373737;
 $NAV-DESELECTED: #5f5f5f;
-$PROJECT-TITLE: #514949;
+$TITLE: #4f4564;
+$WHITE-TITLE: #f8fbff;
 $SOCIAL-BG: #f1e4da;
 
 a {
@@ -26,6 +27,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: $BG;
+  color: $TEXT-BLACK;
 }
 
 .text-heading-serif {
@@ -51,6 +53,78 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
+
+//
+// NEW STUFF
+//
+
+nav {
+  background-color: rgba(255, 255, 255, 0.411);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.295);
+}
+
+header {
+  background-image: linear-gradient(
+    135deg,
+    rgba(190, 184, 87, 0.48),
+    rgba(58, 113, 161, 0.5),
+    rgba(75, 131, 180, 0.5),
+    #f8fbff
+  );
+  background-size: 350%;
+  background-position: left;
+  animation: bg-animation 20s infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.header-title {
+  font-size: 90px;
+}
+
+.title-1 {
+  top: 20%;
+  left: 2rem;
+}
+
+.title-2 {
+  top: 40%;
+  left: 4rem;
+}
+
+.header-cta-container {
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title {
+  line-height: 3rem;
+}
+
+.section-stack {
+  background-color: #31373f;
+}
+
+.title-color {
+  color: $TITLE;
+}
+
+.title-white {
+  color: $WHITE-TITLE;
+}
+
+//
+// OLD STUFF
+//
 
 .text-hero-1 {
   top: -3.3rem;
@@ -89,10 +163,6 @@ body {
 
 .nav-deselected {
   color: $NAV-DESELECTED;
-}
-
-.prj-title {
-  color: $PROJECT-TITLE;
 }
 
 .backdrop {
