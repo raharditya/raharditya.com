@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Invitation() {
   return (
-    <div className="px-6 my-16">
+    <div className="px-6 my-16 md:container md:mx-auto">
       <div className="text-center bg-white rounded-xl px-6 py-6 shadow-lg">
         <h2 className="leading-6 mb-4 font-bold text-2xl">
           Let's work

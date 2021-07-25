@@ -122,6 +122,25 @@ header {
   color: $WHITE-TITLE;
 }
 
+@media screen and (min-width: 900px) {
+  .introduction-hero {
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+    width: 300px;
+  }
+
+  .title-1 {
+    top: 20%;
+    left: 25%;
+  }
+
+  .title-2 {
+    top: 40%;
+    left: 40%;
+  }
+}
+
 //
 // OLD STUFF
 //

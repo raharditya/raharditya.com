@@ -1,9 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
-import { useMediaQuery } from './useMediaQuery'
+import React from "react";
+import Link from "next/link";
+import { useMediaQuery } from "./useMediaQuery";
+import { usePopper } from "react-popper";
 
 function HomeHeader(props) {
-  const isDesktop = useMediaQuery('(max-width: 768px)')
+  const isDesktop = useMediaQuery("(max-width: 768px)");
 
   return (
     <header className="h-screen">
@@ -12,9 +13,9 @@ function HomeHeader(props) {
         <h1 className="header-title title-2 absolute">Raharditya</h1>
 
         <div className="header-cta-container p-4 absolute bg-white rounded-lg shadow-lg">
-          <div className="md:flex">
+          <div className="md:flex md:items-center">
             <Link href="/contact-me">
-              <a className="bg-gray-500 block w-full py-3 mb-4 rounded-md text-white">
+              <a className="bg-gray-500 block w-full py-3 mb-4 md:mb-0 md:mr-2 md:px-5 rounded-md text-white">
                 Contact
               </a>
             </Link>
@@ -24,21 +25,25 @@ function HomeHeader(props) {
                 href="https://instagram.com/a.raharditya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-gray-500 rounded-md mr-4"
+                className="p-3 bg-gray-500 rounded-md mr-4 md:mr-2"
               >
                 <img
                   src="/assets/social/instagram.svg"
                   alt=""
-                  className="h-6"
+                  className="h-6 md:h-6 md:max-w-none"
                 />
               </a>
               <a
                 href="https://instagram.com/a.raharditya"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-gray-500 rounded-md mr-4"
+                className="p-3 bg-gray-500 rounded-md mr-4 md:mr-2"
               >
-                <img src="/assets/social/github.svg" alt="" className="h-6" />
+                <img
+                  src="/assets/social/github.svg"
+                  alt=""
+                  className="h-6 md:h-6 md:max-w-none"
+                />
               </a>
               <a
                 href="https://instagram.com/a.raharditya"
@@ -46,7 +51,11 @@ function HomeHeader(props) {
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-500 rounded-md"
               >
-                <img src="/assets/social/linkedin.svg" alt="" className="h-6" />
+                <img
+                  src="/assets/social/linkedin.svg"
+                  alt=""
+                  className="h-6 md:h-6 md:max-w-none"
+                />
               </a>
             </div>
           </div>
@@ -121,7 +130,7 @@ function HomeHeader(props) {
         </div> */}
       </div>
     </header>
-  )
+  );
 }
 
-export default HomeHeader
+export default HomeHeader;
