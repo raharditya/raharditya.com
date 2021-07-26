@@ -6,26 +6,21 @@ export default function Invitation() {
   const isDesktop = useMediaQuery("(max-width: 768px)");
 
   return (
-    <div className="invitation text-center mb-12 md:flex md:mt-12">
+    <div className="invitation text-center md:container md:mx-auto px-6 relative mb-12">
+      <img src="/assets/invite-bg.svg" alt="" className="w-full" />
+
       <div
-        className="invitation-bg text-white text-heading-serif text-3xl flex items-center justify-center md:flex-grow md:h-auto md:w-1/2"
-        style={{ height: isDesktop ? 280 : 400 }}
+        className="py-10 md:py-24 backdrop-glass w-4/5 mx-auto rounded-lg absolute shadow-lg"
+        style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
       >
-        <h2>
-          Let's work
-          <br />
-          Together
-        </h2>
-      </div>
-      <div className="invitation-cta px-8 py-16 md:flex-grow md:w-1/2 md:px-32">
-        <p className="text-black">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-          tempor lorem non odio tincidunt.
-        </p>
+        <small className="text-light text-defocused block mb-2 md:mb-4">
+          Hire Me
+        </small>
+        <h2 className="font-bold text-xl md:text-3xl">Let's work Together</h2>
 
         <Link href="/contact">
-          <a className="inline-block py-2 px-8 rounded-full bg-red-400 text-white font-bold mt-6">
-            Contact me
+          <a className="inline-block py-2 px-8 rounded-lg bg-green-400 text-white text-sm md:text-base font-bold mt-6">
+            Get in touch
           </a>
         </Link>
       </div>

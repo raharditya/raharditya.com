@@ -6,7 +6,7 @@ function HomeHeader(props) {
   const isDesktop = useMediaQuery("(max-width: 768px)");
 
   return (
-    <header className="h-screen">
+    <header className="h-screen relative" id="top">
       <div className="md:px-8 flex h-full items-center text-center relative overflow-hidden">
         <div
           className="backdrop absolute left-0 right-0 bottom-0 w-full z-0"
@@ -55,7 +55,7 @@ function HomeHeader(props) {
           }}
         />
 
-        <div className="container mx-auto w-full text-center">
+        <div className="container mx-auto -mt-16 w-full text-center">
           <p className="text-light relative z-10">Hi. My name is</p>
 
           <div className="header-img relative mt-20">
@@ -72,9 +72,86 @@ function HomeHeader(props) {
             </h2>
           </div>
 
-          <small className="text-defocused text-light mt-32 block relative z-10">
+          {/* <small className="text-defocused text-light mt-32 block relative z-10">
             Scroll
-          </small>
+          </small> */}
+
+          <div
+            className="absolute p-4 bg-white md:flex md:items-center shadow-lg rounded-md"
+            style={{
+              bottom: "3rem",
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
+          >
+            <div className="mb-4 md:mb-0 md:mr-4">
+              <Link href="/contact-me">
+                <a className="bg-green-400 py-3 px-4 rounded-md block h-full text-white w-full mb-4 md:mb-0">
+                  Contact
+                </a>
+              </Link>
+            </div>
+
+            <div className="flex">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="header-social bg-green-400 p-2 rounded-md block h-full mr-4 relative group"
+              >
+                <div
+                  className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
+                  style={{
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    top: "-3rem",
+                    backgroundColor: "#71638E",
+                  }}
+                >
+                  @a.raharditya
+                </div>
+                <img src="/assets/social/instagram.svg" alt="" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="header-social bg-green-400 p-2 rounded-md block h-full relative mr-4"
+              >
+                <div
+                  className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
+                  style={{
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    top: "-3rem",
+                    backgroundColor: "#71638E",
+                  }}
+                >
+                  Asebodi
+                </div>
+                <img src="/assets/social/github.svg" alt="" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="header-social bg-green-400 p-2 rounded-md block h-full relative"
+              >
+                <div
+                  className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
+                  style={{
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    top: "-4rem",
+                    backgroundColor: "#71638E",
+                  }}
+                >
+                  Muh. Raharditya
+                </div>
+                <img src="/assets/social/linkedin.svg" alt="" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
