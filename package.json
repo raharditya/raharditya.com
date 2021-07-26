@@ -11,12 +11,14 @@
     "watch:css": "postcss styles/tailwind.css -o styles/main.css"
   },
   "dependencies": {
+    "@n8tb1t/use-scroll-position": "^2.0.3",
     "express-validator": "^6.9.2",
     "framer-motion": "^2.9.3",
     "next": "9.5.2",
     "node-sass": "^4.14.1",
     "nodemailer": "^6.4.17",
     "react": "16.13.1",
+    "react-animated-cursor": "^2.2.0",
     "react-dom": "16.13.1",
     "react-typist": "^2.0.5"
   },
