@@ -15,6 +15,20 @@ a {
   text-decoration: none;
 }
 
+p,
+button {
+  color: #5f5f5f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4f4564;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -177,9 +191,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 99;
+  transition: all 150ms ease-in-out;
 
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
+  &.active {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+  }
 
   h3 > a {
     // font-size: 2rem;
