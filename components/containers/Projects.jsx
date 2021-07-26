@@ -18,7 +18,7 @@ function Projects(props) {
       ></div>
 
       <div className="container mx-auto md:px-6">
-        <h3 className="text-heading-serif section-heading text-xl mb-8 relative z-10">
+        <h3 className="text-heading-serif section-heading text-2xl mb-8 relative z-10">
           Projects
         </h3>
 

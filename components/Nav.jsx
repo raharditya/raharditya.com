@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function Nav(props) {
   return (
-    <nav className="w-full px-6 md:px-0 h-16 flex items-center">
+    <nav className="w-full px-6 md:px-0 h-16 flex items-center shadow-lg">
       <div className="flex justify-between items-center container md:px-8 mx-auto">
         <h3 className="text-heading-serif text-xl">
           <Link href="/">

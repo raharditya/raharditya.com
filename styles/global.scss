@@ -1,5 +1,6 @@
 $BG: #fcfcfd;
 $MAIN-ACCENT: #f7f2e7;
+$MAIN-ACCENT-GLASS: #f7f2e79f;
 $SEC-ACCENT: #71638e;
 $DEFOCUSED-TEXT: #858181;
 $SECTION-HEADING: #4f4564;
@@ -26,6 +27,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: $BG;
+  scroll-behavior: smooth;
 }
 
 .text-heading-serif {
@@ -99,12 +101,17 @@ body {
   background-color: $MAIN-ACCENT;
 }
 
+.backdrop-glass {
+  background-color: $MAIN-ACCENT-GLASS;
+  backdrop-filter: blur(10px);
+}
+
 .social {
   background-color: $SOCIAL-BG;
 }
 
 .invitation-bg {
-  background-image: url("/assets/invitation.svg");
+  background-image: url("/assets/invite-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -118,6 +125,49 @@ body {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.247);
 }
 
+.stack-container {
+  scroll-snap-type: x mandatory;
+  // scroll-padding: 50%;
+}
+
+.stack-item {
+  scroll-snap-align: start;
+}
+
+.scroll-to-top {
+  &:hover {
+    img {
+      transform: scale(110%);
+    }
+  }
+}
+
+.featured-project {
+  height: 500px;
+  overflow: hidden;
+
+  .featured-ss-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transform: rotate(-29deg) translateX(-6rem);
+
+    .featured-ss {
+    }
+  }
+}
+
+.social-detail {
+  display: none;
+}
+
+.header-social {
+  &:hover {
+    .social-detail {
+      display: block;
+    }
+  }
+}
+
 nav {
   height: 10vh;
   position: fixed;
@@ -127,6 +177,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 99;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
 
   h3 > a {
     // font-size: 2rem;
@@ -168,6 +221,11 @@ nav {
 }
 
 @media screen and (max-width: 900px) {
+  .img-object {
+    object-fit: cover;
+    object-position: center;
+  }
+
   nav {
     // background-color: #00000042;
     height: 9vh;
