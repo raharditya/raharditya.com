@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import PropTypes from "prop-types";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 function Nav(props) {
+  const [showBg, setShowBg] = useState(false);
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    if (currPos.y < -200) {
+      setShowBg(true);
+    } else {
+      setShowBg(false);
+    }
+    // console.log(currPos.x);
+    // console.log(currPos.y);
+  });
+
   return (
-    <nav className="w-full px-6 md:px-0 h-16 flex items-center shadow-lg">
+    <nav
+      className={`${
+        showBg ? "active shadow-lg" : ""
+      } w-full px-6 md:px-0 h-16 flex items-center`}
+    >
       <div className="flex justify-between items-center container md:px-8 mx-auto">
         <h3 className="text-heading-serif text-xl">
           <Link href="/">
@@ -44,7 +60,5 @@ function Nav(props) {
     </nav>
   );
 }
-
-Nav.propTypes = {};
 
 export default Nav;
