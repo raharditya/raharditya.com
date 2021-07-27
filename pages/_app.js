@@ -26,14 +26,14 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <AnimatedCursor
-        innerSize={12}
-        outerSize={36}
-        color="193, 11, 111"
-        outerAlpha={0.2}
-        innerScale={0.7}
-        outerScale={2.5}
-      />
+      {/* <AnimatedCursor
+      innerSize={12}
+      outerSize={36}
+      color="193, 11, 111"
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={2.5}
+      /> */}
       <Nav />
       <Component {...pageProps} isMobile={isMobile} />
       <Footer />

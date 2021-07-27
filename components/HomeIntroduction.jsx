@@ -2,7 +2,7 @@ import React from "react";
 
 function HomeIntroduction(props) {
   return (
-    <div className="px-6 py-8 md:container md:mx-auto">
+    <div className="px-6 py-8 my-10 md:container md:mx-auto">
       <h3 className="md:hidden text-center text-heading-serif section-heading text-2xl mb-8 relative z-10">
         Who am I
       </h3>
