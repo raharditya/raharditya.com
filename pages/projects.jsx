@@ -5,7 +5,7 @@ function projects(props) {
     console.log(props.isMobile);
   }
   return (
-    <div className="pt-24 md:container md:mx-auto md:px-2">
+    <div className="pt-24 md:container md:mx-auto md:px-2" id="top">
       <div className="relative px-6 mb-40 md:mb-56">
         <h2 className="relative z-10 text-heading-serif page-heading font-bold text-4xl">
           Projects
@@ -36,7 +36,7 @@ function projects(props) {
         <ProjectItem
           img="/assets/prj.jpg"
           category="PWA"
-          path="/project/sapasampah"
+          path="/projects/sapasampah"
         >
           Sapa
           <br />
@@ -45,7 +45,7 @@ function projects(props) {
         <ProjectItem
           img="/assets/prj1.jpg"
           category="Fullstack Javascript"
-          path="/project/kkn-covid-jogja"
+          path="/projects/kkn-covid-jogja"
         >
           KKN Covid
           <br />
@@ -54,7 +54,7 @@ function projects(props) {
         <ProjectItem
           img="/assets/prj3.jpg"
           category="Wordpress"
-          path="/project/doolan"
+          path="/projects/doolan"
         >
           Doolan
         </ProjectItem>

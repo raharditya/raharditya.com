@@ -34,7 +34,7 @@ function contactMe(props) {
   });
 
   return (
-    <div className="pt-24 flex flex-col md:flex-row">
+    <div className="pt-24 flex flex-col md:flex-row" id="top">
       <div className="w-1/2 ">
         <h2 className="px-6 text-heading-serif page-heading font-bold text-4xl">
           Contact
