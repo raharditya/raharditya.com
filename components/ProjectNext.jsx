@@ -1,6 +1,6 @@
 function ProjectNext(props) {
   return (
-    <div className="ml-auto mt-10 mb-20 w-4/5 bg-white rounded-lg rounded-tr-none rounded-br-none shadow-lg p-4 flex">
+    <div className="ml-auto mt-10 mb-20 w-4/5 md:w-2/6 bg-white rounded-lg rounded-tr-none rounded-br-none shadow-lg p-4 flex">
       <img
         src="/assets/placeholder.jpg"
         alt=""
