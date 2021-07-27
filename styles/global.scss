@@ -285,6 +285,8 @@ nav {
       background-color: $SEC-ACCENT;
       border-radius: 15px;
       margin: 3px 0;
+
+      transition: all 150ms ease-in-out;
     }
 
     .line1 {
@@ -293,6 +295,24 @@ nav {
 
     .line2 {
       width: 26px;
+    }
+
+    .line3 {
+      width: 26px;
+    }
+  }
+
+  .toggle {
+    .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .line2 {
+      opacity: 0;
+    }
+
+    .line3 {
+      transform: rotate(45deg) translate(-4px, -5px);
     }
   }
 
@@ -322,7 +342,9 @@ nav {
   }
 
   &:hover {
-    background-color: $MAIN-ACCENT-GLASS;
+    // background-color: $MAIN-ACCENT-GLASS;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
 
     .project-enter-img {
       transform: scale(1.2);
@@ -366,6 +388,24 @@ nav {
     height: 9vh;
     h3 {
       color: white;
+    }
+
+    ul {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: -110vh;
+      left: 0;
+      background-color: $MAIN-ACCENT;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 250ms ease-in-out;
+    }
+
+    .nav-mobile-open {
+      top: 0;
     }
   }
 }
