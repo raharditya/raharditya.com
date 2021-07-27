@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import { NavLink } from "./NavLink";
 
 function Nav(props) {
   const [showBg, setShowBg] = useState(false);
@@ -30,24 +31,28 @@ function Nav(props) {
 
         <ul className="items-center gap-12 hidden md:flex">
           <li>
-            <Link href="/">
+            <NavLink href="/" exact className="text-light text-sm">
+              Home
+            </NavLink>
+            {/* <Link href="/">
               <a className="active text-light text-sm">Home</a>
-            </Link>
+            </Link> */}
           </li>
           <li>
-            <Link href="/projects">
+            <NavLink href="/projects" className="text-light text-sm">
+              Projects
+            </NavLink>
+            {/* <Link href="/projects">
               <a className="text-light text-sm">Projects</a>
-            </Link>
+            </Link> */}
           </li>
           <li>
-            <Link href="/about">
-              <a className="text-light text-sm">About</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact-me">
+            <NavLink href="/contact-me" exact className="text-light text-sm">
+              Contact Me
+            </NavLink>
+            {/* <Link href="/contact-me">
               <a className="text-light text-sm">Contact Me</a>
-            </Link>
+            </Link> */}
           </li>
         </ul>
 
