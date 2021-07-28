@@ -3,7 +3,8 @@ import "../styles/tailwind.css";
 import { useState } from "react";
 import { useMediaQuery } from "../components/useMediaQuery";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import AnimatedCursor from "react-animated-cursor";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "../styles/global.scss";
 import Footer from "../components/containers/Footer";
@@ -26,14 +27,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {/* <AnimatedCursor
-      innerSize={12}
-      outerSize={36}
-      color="193, 11, 111"
-      outerAlpha={0.2}
-      innerScale={0.7}
-      outerScale={2.5}
-      /> */}
       <Nav />
       <Component {...pageProps} isMobile={isMobile} />
       <Footer />
@@ -51,6 +44,7 @@ function MyApp({ Component, pageProps }) {
           />
         </a>
       </Link>
+      <ToastContainer />
     </>
   );
 }
