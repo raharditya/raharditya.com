@@ -20,6 +20,7 @@
     "react": "16.13.1",
     "react-animated-cursor": "^2.2.0",
     "react-dom": "16.13.1",
+    "react-toastify": "^7.0.4",
     "react-typist": "^2.0.5"
   },
   "devDependencies": {
