@@ -1,10 +1,15 @@
 import Link from "next/link";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 function contactMe(props) {
+  const [loading, setLoading] = useState(false);
+  const [res, setRes] = useState({});
+
   function formHandler(e) {
     e.preventDefault();
-    console.log("this runs");
+
+    setLoading(true);
 
     fetch("/api/contact", {
       method: "POST",
@@ -16,6 +21,13 @@ function contactMe(props) {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        setLoading(false);
+
+        if (data.error) {
+          toast.error(`${data.status}: ${data.msg}`);
+        } else {
+          toast.success("Contact form submitted succesfully!");
+        }
       });
   }
 
@@ -34,9 +46,9 @@ function contactMe(props) {
   });
 
   return (
-    <div className="pt-24 flex flex-col md:flex-row" id="top">
-      <div className="w-1/2 ">
-        <h2 className="px-6 text-heading-serif page-heading font-bold text-4xl">
+    <div className="pt-24 mb-16 flex flex-col md:flex-row" id="top">
+      <div className="md:w-1/2 ">
+        <h2 className="px-6 md:text-right text-heading-serif page-heading font-bold text-4xl md:relative md:left-4">
           Contact
           <br />
           Me
@@ -45,34 +57,46 @@ function contactMe(props) {
         <div className="backdrop py-16 md:py-24 w-full flex items-center justify-center -mt-6 md:flex-grow">
           <div className="text-center">
             <p>I'm available at</p>
-            <Link href="#">
+            <Link href="mailto:contact@raharditya.com">
               <a className="font-bold underline">contact@raharditya.com</a>
             </Link>
 
-            <div className="flex gap-4 mt-16">
-              <div className="social w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
-                <img
-                  src="/assets/social/instagram.svg"
-                  alt=""
-                  className="w-full"
-                />
-              </div>
+            <div className="flex justify-between gap-4 mt-16">
+              <Link href="https://instagram.com/a.raharditya">
+                <a target="_blank" rel="noopener noreferrer">
+                  <div className="social w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
+                    <img
+                      src="/assets/social/instagram-contact.svg"
+                      alt=""
+                      className="w-full"
+                    />
+                  </div>
+                </a>
+              </Link>
 
-              <div className="social w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
-                <img
-                  src="/assets/social/github.svg"
-                  alt=""
-                  className="w-full"
-                />
-              </div>
+              <Link href="https://github.com/Asebodi">
+                <a target="_blank" rel="noopener noreferrer">
+                  <div className="social w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
+                    <img
+                      src="/assets/social/github-contact.svg"
+                      alt=""
+                      className="w-full"
+                    />
+                  </div>
+                </a>
+              </Link>
 
-              <div className="social w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
-                <img
-                  src="/assets/social/linkedin.svg"
-                  alt=""
-                  className="w-full"
-                />
-              </div>
+              <Link href="#">
+                <a target="_blank" rel="noopener noreferrer">
+                  <div className="social w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
+                    <img
+                      src="/assets/social/linkedin-contact.svg"
+                      alt=""
+                      className="w-full"
+                    />
+                  </div>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -123,11 +147,22 @@ function contactMe(props) {
         <button
           // type="submit"
           // value="Send"
-          className="block py-2 px-10 bg-red-500 rounded-xl mx-auto text-white font-semibold"
+          className="block py-2 px-10 bg-red-500 rounded-xl mx-auto text-white font-semibold relative"
           onClick={formHandler}
           // onSubmit={(e) => formHandler(e)}
         >
           Send
+          <div
+            className={`absolute ${loading ? "block" : "hidden"}`}
+            style={{ top: "1px", right: "-4rem" }}
+          >
+            <div className="lds-ring">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
         </button>
       </form>
     </div>

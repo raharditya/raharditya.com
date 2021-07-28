@@ -226,8 +226,12 @@ export default async function handler(req, res) {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         console.log("Failed validation proccess");
-        return res.status(422).json({ errors: errors.array() });
+        return res
+          .status(422)
+          .json({ status: 422, error: true, msg: errors.array() });
       }
+      // TODO:
+      // FOR SOME REASON THE CODE ABOVE IS NOT THE RESPONSE THE CLIENT RECEIVED
 
       const { sender, email, msg } = req.body;
 
@@ -258,17 +262,27 @@ export default async function handler(req, res) {
       transporter.sendMail(selfMailOptions, (err, info) => {
         if (err) {
           console.log(err);
-          return res.status(500).json({ msg: "Internal server error" });
+          return res
+            .status(500)
+            .json({ status: 500, error: true, msg: "Internal server error" });
         } else {
           console.log("Self email sent");
 
           transporter.sendMail(senderMailOptions, (err, info) => {
             if (err) {
               console.log(err);
-              return res.status(500).json({ msg: "Internal server error" });
+              return res.status(500).json({
+                status: 500,
+                error: true,
+                msg: "Internal server error",
+              });
             } else {
               console.log("Sender email sent");
-              return res.status(200).json({ msg: `Submission successful` });
+              return res.status(200).json({
+                status: 200,
+                error: false,
+                msg: `Submission successful`,
+              });
             }
           });
         }
@@ -277,7 +291,9 @@ export default async function handler(req, res) {
       break;
 
     default:
-      return res.status(405).json({ errors: "Method not allowed" });
+      return res
+        .status(405)
+        .json({ status: 405, error: true, msg: "Method not allowed" });
 
       break;
   }
