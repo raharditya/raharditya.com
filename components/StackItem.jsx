@@ -1,14 +1,11 @@
 function StackItem(props) {
   return (
-    <div className="stack-item flex-shrink-0 rounded-lg overflow-hidden shadow-lg w-3/5 md:w-64 mr-6">
-      <div className="bg-green-500 h-32"></div>
-      <div className="p-4  text-left">
-        <h4 className="font-bold mb-4 text-lg">React JS</h4>
-        <p>
-          Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan
-          dan penataan huruf atau typesetting.
-        </p>
+    <div className="">
+      <div className="mx-auto rounded-xl border backdrop w-16 h-16 md:w-20 md:h-20 p-4 flex items-center justify-center mb-4">
+        <img src={props.img} alt="" className="w-full" />
       </div>
+
+      <p>{props.title}</p>
     </div>
   );
 }
