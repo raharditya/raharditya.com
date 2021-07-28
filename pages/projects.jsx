@@ -1,9 +1,6 @@
 import ProjectItem from "../components/ProjectItem";
 
 function projects(props) {
-  if (process.browser) {
-    console.log(props.isMobile);
-  }
   return (
     <div className="pt-24 md:container md:mx-auto md:px-2" id="top">
       <div className="relative px-6 mb-40 md:mb-56">

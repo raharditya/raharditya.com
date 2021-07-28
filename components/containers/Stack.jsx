@@ -6,7 +6,7 @@ function Stack(props) {
 
   return (
     <div className="text-center pt-12 pb-16 md:container md:mx-auto">
-      <div className="px-6">
+      <div className="px-6 mb-16">
         <h3 className="text-heading-serif section-heading text-2xl mb-8">
           My Tech Stacks
         </h3>
@@ -16,7 +16,7 @@ function Stack(props) {
             className={`py-2 ${
               stackPos === 0
                 ? "bg-green-400 shadow-lg font-bold text-white"
-                : ""
+                : "border"
             } hover:shadow-lg rounded-lg transition duration-150 ease-in-out focus:outline-none`}
             onClick={() => setStackPos(0)}
           >
@@ -26,7 +26,7 @@ function Stack(props) {
             className={`py-2 ${
               stackPos === 1
                 ? "bg-green-400 shadow-lg font-bold text-white"
-                : ""
+                : "border"
             } hover:shadow-lg rounded-lg transition duration-150 ease-in-out focus:outline-none`}
             onClick={() => setStackPos(1)}
           >
@@ -36,7 +36,7 @@ function Stack(props) {
             className={`py-2 ${
               stackPos === 2
                 ? "bg-green-400 shadow-lg font-bold text-white"
-                : ""
+                : "border"
             } hover:shadow-lg rounded-lg transition duration-150 ease-in-out focus:outline-none`}
             onClick={() => setStackPos(2)}
           >
@@ -45,10 +45,43 @@ function Stack(props) {
         </div>
       </div>
 
-      <div className="stack-container flex mt-8 overflow-x-scroll ml-6 pb-4">
-        <StackItem />
-        <StackItem />
-        <StackItem />
+      <div className="">
+        {stackPos === 0 && (
+          <>
+            <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
+              <StackItem img="/assets/stack/html.svg" title="HTML" />
+              <StackItem img="/assets/stack/css.svg" title="CSS" />
+              <StackItem img="/assets/stack/react.svg" title="React" />
+            </div>
+            <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
+              <StackItem img="/assets/stack/tailwind.svg" title="Tailwind" />
+              <StackItem img="/assets/stack/bootstrap.svg" title="Bootstrap" />
+            </div>
+          </>
+        )}
+
+        {stackPos === 1 && (
+          <>
+            <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
+              <StackItem img="/assets/stack/html.svg" title="HTML" />
+              <StackItem img="/assets/stack/css.svg" title="CSS" />
+              <StackItem img="/assets/stack/react.svg" title="React" />
+            </div>
+          </>
+        )}
+
+        {stackPos === 2 && (
+          <>
+            <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
+              <StackItem img="/assets/stack/html.svg" title="HTML" />
+              <StackItem img="/assets/stack/css.svg" title="CSS" />
+              <StackItem img="/assets/stack/react.svg" title="React" />
+            </div>
+            <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
+              <StackItem img="/assets/stack/tailwind.svg" title="Tailwind" />
+            </div>
+          </>
+        )}
       </div>
 
       {/* <div className="md:flex md:justify-center md:items-center md:gap-32">

@@ -78,7 +78,9 @@ function Nav(props) {
         </ul>
 
         <div
-          className={`burger md:hidden ${navOpen ? "toggle" : ""}`}
+          className={`burger md:hidden ${
+            navOpen ? "toggle" : ""
+          } cursor-pointer`}
           onClick={() => setNavOpen(!navOpen)}
         >
           <div className="line1 rounded-sm h-1 w-6 my-1 bg-black"></div>

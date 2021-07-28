@@ -19,8 +19,8 @@ function HomeIntroduction(props) {
           </h3>
 
           <h4 className="font-bold mb-4 mt-8 text-lg">
-            Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan
-            dan penataan huruf atau typesetting.
+            I am a full-stack developer based in Yogyakarta, Indonesia. I Mainly
+            work with the MERN Stack.
           </h4>
 
           <p>
