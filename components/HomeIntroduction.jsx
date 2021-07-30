@@ -7,13 +7,15 @@ function HomeIntroduction(props) {
         Who am I
       </h3>
 
-      <div className="md:flex md:flex-row-reverse md:gap-16">
+      <div className="md:flex md:flex-row-reverse md:justify-between md:gap-16">
+        {/* <div className="w-full"> */}
         <img
           src="/assets/header/hero.jpg"
           alt=""
           className="w-full h-64 md:h-64 md:w-auto img-object rounded-lg shadow-lg"
         />
-        <div className="">
+        {/* </div> */}
+        <div className="md:max-w-2xl">
           <h3 className="hidden md:block text-heading-serif section-heading text-2xl mb-8 relative z-10">
             Who am I
           </h3>
