@@ -23,10 +23,18 @@ function contactMe(props) {
         console.log(data);
         setLoading(false);
 
-        if (data.error) {
-          toast.error(`${data.status}: ${data.msg}`);
+        if (data.error || data.errors?.length > 0) {
+          toast.error(`Error: All fields are required!`);
         } else {
           toast.success("Contact form submitted succesfully!");
+
+          setForm({
+            sender: "",
+            email: "",
+            msg: "",
+            error: false,
+            errorMsg: "",
+          });
         }
       });
   }
