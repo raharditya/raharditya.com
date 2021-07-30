@@ -18,8 +18,8 @@ export default function Invitation() {
         </small>
         <h2 className="font-bold text-xl md:text-3xl">Let's work Together</h2>
 
-        <Link href="/contact">
-          <a className="inline-block py-2 px-8 rounded-lg bg-green-400 text-white text-sm md:text-base font-bold mt-6">
+        <Link href="/contact-me">
+          <a className="inline-block py-2 px-8 rounded-lg header-cta-bg hover:bg-green-500 transition duration-150 ease-in-out text-white text-sm md:text-base font-bold mt-6">
             Get in touch
           </a>
         </Link>

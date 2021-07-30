@@ -15,7 +15,7 @@ function Stack(props) {
           <button
             className={`py-2 ${
               stackPos === 0
-                ? "bg-green-400 shadow-lg font-bold text-white"
+                ? "header-cta-bg shadow-lg font-bold text-white"
                 : "border"
             } hover:shadow-lg rounded-lg transition duration-150 ease-in-out focus:outline-none`}
             onClick={() => setStackPos(0)}
@@ -25,7 +25,7 @@ function Stack(props) {
           <button
             className={`py-2 ${
               stackPos === 1
-                ? "bg-green-400 shadow-lg font-bold text-white"
+                ? "header-cta-bg shadow-lg font-bold text-white"
                 : "border"
             } hover:shadow-lg rounded-lg transition duration-150 ease-in-out focus:outline-none`}
             onClick={() => setStackPos(1)}
@@ -35,7 +35,7 @@ function Stack(props) {
           <button
             className={`py-2 ${
               stackPos === 2
-                ? "bg-green-400 shadow-lg font-bold text-white"
+                ? "header-cta-bg shadow-lg font-bold text-white"
                 : "border"
             } hover:shadow-lg rounded-lg transition duration-150 ease-in-out focus:outline-none`}
             onClick={() => setStackPos(2)}

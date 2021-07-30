@@ -3,7 +3,7 @@ import React from "react";
 
 function ProjectItem(props) {
   return (
-    <Link href={props.path}>
+    <Link href={`/projects/${props.path}`}>
       <a className="">
         <div className="md:flex mb-12 relative z-10 rounded-xl project-item">
           <img
@@ -18,9 +18,9 @@ function ProjectItem(props) {
               <small className="text-light text-defocused">
                 {props.category}
               </small>
-              <h2 className="text-heading-sans text-2xl md:text-3xl prj-title">
+              <div className="text-heading-sans text-2xl md:text-3xl prj-title">
                 {props.children}
-              </h2>
+              </div>
             </div>
 
             <div className="prj-cta px-4 border-l h-full flex items-center">

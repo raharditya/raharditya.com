@@ -86,70 +86,73 @@ function HomeHeader(props) {
           >
             <div className="mb-4 md:mb-0 md:mr-4">
               <Link href="/contact-me">
-                <a className="bg-green-400 py-3 px-4 rounded-md block h-full text-white w-full mb-4 md:mb-0">
+                <a className="header-cta-bg hover:bg-green-500 transitio n duration-150 ease-in-out py-3 px-4 rounded-md block h-full text-white w-full mb-4 md:mb-0">
                   Contact
                 </a>
               </Link>
             </div>
 
             <div className="flex">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="header-social bg-green-400 p-2 rounded-md block h-full mr-4 relative group"
-              >
-                <div
-                  className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
-                  style={{
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    top: "-3rem",
-                    backgroundColor: "#71638E",
-                  }}
+              <Link href="https://www.instagram.com/a.raharditya/">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="header-social header-cta-bg hover:bg-green-500 transition duration-150 ease-in-out p-2 rounded-md block h-full mr-4 relative group"
                 >
-                  @a.raharditya
-                </div>
-                <img src="/assets/social/instagram.svg" alt="" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="header-social bg-green-400 p-2 rounded-md block h-full relative mr-4"
-              >
-                <div
-                  className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
-                  style={{
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    top: "-3rem",
-                    backgroundColor: "#71638E",
-                  }}
+                  <div
+                    className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
+                    style={{
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      top: "-3rem",
+                      backgroundColor: "#71638E",
+                    }}
+                  >
+                    @a.raharditya
+                  </div>
+                  <img src="/assets/social/instagram.svg" alt="" />
+                </a>
+              </Link>
+              <Link href="https://github.com/Asebodi">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="header-social header-cta-bg hover:bg-green-500 transition duration-150 ease-in-out p-2 rounded-md block h-full relative mr-4"
                 >
-                  Asebodi
-                </div>
-                <img src="/assets/social/github.svg" alt="" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="header-social bg-green-400 p-2 rounded-md block h-full relative"
-              >
-                <div
-                  className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
-                  style={{
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    top: "-4rem",
-                    backgroundColor: "#71638E",
-                  }}
+                  <div
+                    className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
+                    style={{
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      top: "-3rem",
+                      backgroundColor: "#71638E",
+                    }}
+                  >
+                    Asebodi
+                  </div>
+                  <img src="/assets/social/github.svg" alt="" />
+                </a>
+              </Link>
+              <Link href="https://www.linkedin.com/in/adit-raharditya-a17b201a9/">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="header-social header-cta-bg hover:bg-green-500 transition duration-150 ease-in-out p-2 rounded-md block h-full relative"
                 >
-                  Muh. Raharditya
-                </div>
-                <img src="/assets/social/linkedin.svg" alt="" />
-              </a>
+                  <div
+                    className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
+                    style={{
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      top: "-4rem",
+                      backgroundColor: "#71638E",
+                    }}
+                  >
+                    Muh. Raharditya
+                  </div>
+                  <img src="/assets/social/linkedin.svg" alt="" />
+                </a>
+              </Link>
             </div>
           </div>
         </div>
