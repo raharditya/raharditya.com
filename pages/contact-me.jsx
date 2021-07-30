@@ -66,6 +66,17 @@ function contactMe(props) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#FCFCFD" />
+        <meta property="og:url" content="https://raharditya.com/contact-me" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contact Me - Adit Raharditya" />
+        <meta
+          property="og:description"
+          content="Adit Raharditya is a full-stack web developer based in Yogyakarta, Indonesia."
+        />
+        {/* <meta
+          property="og:image"
+          content={`https://raharditya.com${currentProject?.thumbnail}`}
+        /> */}
       </Head>
 
       <div className="md:w-1/2 ">
@@ -168,7 +179,7 @@ function contactMe(props) {
         <button
           // type="submit"
           // value="Send"
-          className="block py-2 px-10 bg-red-500 rounded-xl mx-auto text-white font-semibold relative"
+          className="block py-2 px-10 header-cta-bg hover:bg-green-500 transition duration-150 ease-in-out rounded-xl mx-auto text-white font-semibold relative"
           onClick={formHandler}
           // onSubmit={(e) => formHandler(e)}
         >

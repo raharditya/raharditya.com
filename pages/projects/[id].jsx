@@ -31,6 +31,23 @@ function ProjectPage(props) {
         <meta name="description" content={currentProject?.shortDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#FCFCFD" />
+        <meta
+          property="og:url"
+          content={`https://raharditya.com/projects/${currentProject?.path}`}
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content={`${currentProject?.title} - Adit Raharditya`}
+        />
+        <meta
+          property="og:description"
+          content={currentProject?.shortDescription}
+        />
+        <meta
+          property="og:image"
+          content={`https://raharditya.com${currentProject?.thumbnail}`}
+        />
       </Head>
 
       {currentProject ? (
