@@ -5,7 +5,7 @@ import Link from "next/link";
 function ProjectHeader(props) {
   const { data } = props;
   return (
-    <div className="mb-20 md:mb-32 px-6 pt-24">
+    <div className="mb-20 md:mb-32 px-6 pt-24" id="top">
       <div className="">
         <h2 className="text-heading-serif text-black text-3xl md:text-4xl relative z-10 pl-4 md:pl-16">
           {data.title}
