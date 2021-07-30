@@ -13,6 +13,13 @@ export default function Home() {
       <Head>
         <title>Adit Raharditya</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="Adit Raharditya is a full-stack web developer based in Yogyakarta, Indonesia."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#FCFCFD" />
       </Head>
 
       <div className="project-container">

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -47,6 +48,18 @@ function contactMe(props) {
 
   return (
     <div className="pt-24 mb-16 flex flex-col md:flex-row" id="top">
+      <Head>
+        <title>Contact Me - Adit Raharditya</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="Adit Raharditya is a full-stack web developer based in Yogyakarta, Indonesia."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#FCFCFD" />
+      </Head>
+
       <div className="md:w-1/2 ">
         <h2 className="px-6 md:text-right text-heading-serif page-heading font-bold text-4xl md:relative md:left-4">
           Contact
@@ -64,7 +77,7 @@ function contactMe(props) {
             <div className="flex justify-between gap-4 mt-16">
               <Link href="https://instagram.com/a.raharditya">
                 <a target="_blank" rel="noopener noreferrer">
-                  <div className="social w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
+                  <div className="social hover:shadow-xl hover:border transition duration-150 ease-in-out w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
                     <img
                       src="/assets/social/instagram-contact.svg"
                       alt=""
@@ -76,7 +89,7 @@ function contactMe(props) {
 
               <Link href="https://github.com/Asebodi">
                 <a target="_blank" rel="noopener noreferrer">
-                  <div className="social w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
+                  <div className="social hover:shadow-xl hover:border transition duration-150 ease-in-out w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
                     <img
                       src="/assets/social/github-contact.svg"
                       alt=""
@@ -86,9 +99,9 @@ function contactMe(props) {
                 </a>
               </Link>
 
-              <Link href="#">
+              <Link href="https://www.linkedin.com/in/adit-raharditya-a17b201a9/">
                 <a target="_blank" rel="noopener noreferrer">
-                  <div className="social w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
+                  <div className="social hover:shadow-xl hover:border transition duration-150 ease-in-out w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
                     <img
                       src="/assets/social/linkedin-contact.svg"
                       alt=""
