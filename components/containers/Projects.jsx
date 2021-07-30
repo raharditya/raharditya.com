@@ -22,11 +22,7 @@ function Projects(props) {
           Projects
         </h3>
 
-        <ProjectItem
-          img="/assets/prj.jpg"
-          category="PWA"
-          path="/projects/sapasampah"
-        >
+        <ProjectItem img="/assets/prj.jpg" category="PWA" path="sapasampah">
           Sapa
           <br />
           -sampah
@@ -34,17 +30,13 @@ function Projects(props) {
         <ProjectItem
           img="/assets/prj1.jpg"
           category="Fullstack Javascript"
-          path="/projects/kkn-covid-jogja"
+          path="kkn-covid-jogja"
         >
           KKN Covid
           <br />
           Jogja
         </ProjectItem>
-        <ProjectItem
-          img="/assets/prj3.jpg"
-          category="Wordpress"
-          path="/projects/doolan"
-        >
+        <ProjectItem img="/assets/prj3.jpg" category="Wordpress" path="doolan">
           Doolan
         </ProjectItem>
 
