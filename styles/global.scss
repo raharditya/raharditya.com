@@ -141,6 +141,10 @@ html {
 
 .social {
   background-color: $SOCIAL-BG;
+
+  &:hover {
+    background-color: $MAIN-ACCENT;
+  }
 }
 
 .invitation-bg {
@@ -148,6 +152,10 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.header-cta-bg {
+  background-color: #c1b69f;
 }
 
 .cta-primary {
