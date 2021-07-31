@@ -25,7 +25,9 @@ function ProjectPage(props) {
   return (
     <div className="md:container md:mx-auto">
       <Head>
-        <title>{`${currentProject?.title} - Adit Raharditya`}</title>
+        <title>{`${
+          currentProject?.title ? currentProject.title : "Project Not Found"
+        } - Adit Raharditya`}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="utf-8" />
         <meta name="description" content={currentProject?.shortDescription} />
@@ -38,7 +40,9 @@ function ProjectPage(props) {
         <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content={`${currentProject?.title} - Adit Raharditya`}
+          content={`${
+            currentProject?.title ? currentProject.title : "Project Not Found"
+          } - Adit Raharditya`}
         />
         <meta
           property="og:description"
