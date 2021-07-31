@@ -49,9 +49,9 @@ function Stack(props) {
         {stackPos === 0 && (
           <>
             <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
-              <StackItem img="/assets/stack/html.svg" title="HTML" />
-              <StackItem img="/assets/stack/css.svg" title="CSS" />
               <StackItem img="/assets/stack/react.svg" title="React" />
+              <StackItem img="/assets/stack/nextjs.svg" title="NextJS" />
+              <StackItem img="/assets/stack/firebase.svg" title="Firebase" />
             </div>
             <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
               <StackItem img="/assets/stack/tailwind.svg" title="Tailwind" />
@@ -63,9 +63,9 @@ function Stack(props) {
         {stackPos === 1 && (
           <>
             <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
-              <StackItem img="/assets/stack/html.svg" title="HTML" />
-              <StackItem img="/assets/stack/css.svg" title="CSS" />
-              <StackItem img="/assets/stack/react.svg" title="React" />
+              <StackItem img="/assets/stack/nodejs.svg" title="NodeJS" />
+              <StackItem img="/assets/stack/express.svg" title="Express" />
+              <StackItem img="/assets/stack/mongodb.svg" title="MongoDB" />
             </div>
           </>
         )}
@@ -73,32 +73,12 @@ function Stack(props) {
         {stackPos === 2 && (
           <>
             <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
-              <StackItem img="/assets/stack/html.svg" title="HTML" />
-              <StackItem img="/assets/stack/css.svg" title="CSS" />
-              <StackItem img="/assets/stack/react.svg" title="React" />
-            </div>
-            <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
-              <StackItem img="/assets/stack/tailwind.svg" title="Tailwind" />
+              <StackItem img="/assets/stack/figma.svg" title="Figma" />
+              <StackItem img="/assets/stack/adobexd.svg" title="Adobe XD" />
             </div>
           </>
         )}
       </div>
-
-      {/* <div className="md:flex md:justify-center md:items-center md:gap-32">
-        <StackItem img="/assets/stack/pwa.svg">
-          Progressive
-          <br />
-          Web Apps
-        </StackItem>
-        <StackItem img="/assets/stack/uiux.svg">
-          UI/UX
-          <br /> Designing
-        </StackItem>
-        <StackItem img="/assets/stack/js.svg">
-          Fullstack
-          <br /> Javascript
-        </StackItem>
-      </div> */}
     </div>
   );
 }

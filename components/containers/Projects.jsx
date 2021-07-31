@@ -22,23 +22,27 @@ function Projects(props) {
           Projects
         </h3>
 
-        <ProjectItem img="/assets/prj.jpg" category="PWA" path="sapasampah">
-          Sapa
+        <ProjectItem
+          img="/assets/projects/pemadatan-thumb.jpg"
+          category="PWA"
+          path="jadwal-pemadatan"
+        >
+          Jadwal
           <br />
-          -sampah
+          Pemadatan
         </ProjectItem>
         <ProjectItem
-          img="/assets/prj1.jpg"
-          category="Fullstack Javascript"
-          path="kkn-covid-jogja"
+          img="/assets/projects/admi-thumb.jpg"
+          category="PWA"
+          path="temu-admi-2019"
         >
-          KKN Covid
+          Temu
           <br />
-          Jogja
+          Admi 2019
         </ProjectItem>
-        <ProjectItem img="/assets/prj3.jpg" category="Wordpress" path="doolan">
+        {/* <ProjectItem img="/assets/prj3.jpg" category="Wordpress" path="doolan">
           Doolan
-        </ProjectItem>
+        </ProjectItem> */}
 
         <Link href="/projects">
           <a className="block text-center underline relative z-10">MORE</a>
