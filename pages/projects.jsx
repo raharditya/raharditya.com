@@ -28,12 +28,13 @@ function projects(props) {
         /> */}
       </Head>
 
-      <div className="relative px-6 mb-40 md:mb-56">
-        <h2 className="relative z-10 text-heading-serif page-heading font-bold text-4xl">
+      <div className="relative px-6 mb-12">
+        {/* <div className="relative px-6 mb-40 md:mb-56"> */}
+        <h2 className="relative z-10 text-heading-serif font-bold text-4xl">
           Projects
         </h2>
 
-        <div
+        {/* <div
           className="absolute z-0 bg-gray-400 w-8/12 rounded-xl"
           style={
             props.isMobile
@@ -51,7 +52,7 @@ function projects(props) {
                   width: "90%",
                 }
           }
-        ></div>
+        ></div> */}
       </div>
 
       <div className="px-6">

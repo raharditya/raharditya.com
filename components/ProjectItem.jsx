@@ -5,7 +5,7 @@ function ProjectItem(props) {
   return (
     <Link href={`/projects/${props.path}`}>
       <a className="">
-        <div className="md:flex mb-12 relative z-10 rounded-xl project-item">
+        <div className="md:flex mb-12 relative z-10 rounded-xl project-item hover:shadow-lg">
           <img
             src={props.img}
             alt=""

@@ -96,7 +96,7 @@ function contactMe(props) {
             <div className="flex justify-between gap-4 mt-16">
               <Link href="https://instagram.com/a.raharditya">
                 <a target="_blank" rel="noopener noreferrer">
-                  <div className="social hover:shadow-xl hover:border transition duration-150 ease-in-out w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
+                  <div className="social transition duration-150 ease-in-out w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
                     <img
                       src="/assets/social/instagram-contact.svg"
                       alt=""
@@ -108,7 +108,7 @@ function contactMe(props) {
 
               <Link href="https://github.com/Asebodi">
                 <a target="_blank" rel="noopener noreferrer">
-                  <div className="social hover:shadow-xl hover:border transition duration-150 ease-in-out w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
+                  <div className="social transition duration-150 ease-in-out w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
                     <img
                       src="/assets/social/github-contact.svg"
                       alt=""
@@ -120,7 +120,7 @@ function contactMe(props) {
 
               <Link href="https://www.linkedin.com/in/adit-raharditya-a17b201a9/">
                 <a target="_blank" rel="noopener noreferrer">
-                  <div className="social hover:shadow-xl hover:border transition duration-150 ease-in-out w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
+                  <div className="social transition duration-150 ease-in-out w-12 h-12 mx-auto flex items-center justify-center p-3 rounded-lg">
                     <img
                       src="/assets/social/linkedin-contact.svg"
                       alt=""
