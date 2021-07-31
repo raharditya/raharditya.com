@@ -20,6 +20,17 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#FCFCFD" />
+        <meta property="og:url" content="https://raharditya.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Adit Raharditya" />
+        <meta
+          property="og:description"
+          content="Adit Raharditya is a full-stack web developer based in Yogyakarta, Indonesia."
+        />
+        {/* <meta
+          property="og:image"
+          content={`https://raharditya.com${currentProject?.thumbnail}`}
+        /> */}
       </Head>
 
       <div className="project-container">

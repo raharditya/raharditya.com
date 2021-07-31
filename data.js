@@ -2,7 +2,7 @@ const projectsData = [
   {
     id: 0,
     path: "kkn-covid-jogja",
-    thumbnail: "/assets/1-kkn.svg",
+    thumbnail: "/assets/prj.jpg",
     links: [
       {
         url: "https://kkncovidjogja.online",
@@ -41,7 +41,7 @@ const projectsData = [
   {
     id: 1,
     path: "jadwal-pemadatan",
-    thumbnail: "/assets/2-jadwal.svg",
+    thumbnail: "/assets/prj1.jpg",
     links: [
       {
         url: "https://jadwal.raharditya.com",
@@ -81,7 +81,7 @@ const projectsData = [
   {
     id: 2,
     path: "doolan",
-    thumbnail: "/assets/3-doolan.svg",
+    thumbnail: "/assets/prj3.jpg",
     links: [
       {
         url: "",
@@ -120,7 +120,7 @@ const projectsData = [
   {
     id: 3,
     path: "keluarga-mahahasiswa-administrasi-publik",
-    thumbnail: "/assets/4-kmap.svg",
+    thumbnail: "/assets/prj.jpg",
     links: [
       {
         url: "https://kmap.fisip.uns.ac.id",
@@ -160,7 +160,7 @@ const projectsData = [
   {
     id: 4,
     path: "temu-admi-2019",
-    thumbnail: "/assets/5-admi.svg",
+    thumbnail: "/assets/prj1.jpg",
     links: [
       {
         url: "https://archive.raharditya.com/admi",
