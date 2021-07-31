@@ -42,11 +42,14 @@ function ProjectPage(props) {
               <ProjectSection
                 title={section.section}
                 highlight={section.sectionDescription}
+                key={index * 4}
               >
                 {section.body.map((bodyItem, idx) => {
                   if (bodyItem.type === "p") {
                     return (
-                      <p className="mb-4 text-black">{bodyItem.content}</p>
+                      <p className="mb-4 text-black" key={idx * 7}>
+                        {bodyItem.content}
+                      </p>
                     );
                   }
                 })}

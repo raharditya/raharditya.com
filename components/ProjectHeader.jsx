@@ -34,8 +34,8 @@ function ProjectHeader(props) {
 
         <div className="mt-8 pl-4">
           <p className="text-xs text-defocused">Links:</p>
-          {data.links.map((link) => (
-            <>
+          {data.links.map((link, index) => (
+            <div key={index + 100}>
               <a
                 className="block"
                 href={link.url}
@@ -60,7 +60,7 @@ function ProjectHeader(props) {
               ) : (
                 ""
               )}
-            </>
+            </div>
           ))}
         </div>
       </div>

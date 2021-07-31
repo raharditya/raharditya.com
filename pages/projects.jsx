@@ -44,7 +44,7 @@ function projects(props) {
       </div>
 
       <div className="px-6">
-        {projectsData.map((prj) => {
+        {projectsData.map((prj, idx) => {
           const titleFormat = prj.titleFormat.split("/");
 
           return (
@@ -52,10 +52,11 @@ function projects(props) {
               img={prj.thumbnail}
               category={prj.category}
               path={prj.path}
+              key={idx * 5}
             >
               {titleFormat.map((title, idx) => {
                 if (idx === titleFormat.length) {
-                  return <p key={idx * 3}>{title}</p>;
+                  return <h2 key={idx * 3}>{title}</h2>;
                 } else {
                   return (
                     <h2 key={idx * 3}>
