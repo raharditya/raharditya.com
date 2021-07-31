@@ -8,13 +8,14 @@ function HomeIntroduction(props) {
       </h3>
 
       <div className="md:flex md:flex-row-reverse md:justify-between md:gap-16">
-        {/* <div className="w-full"> */}
-        <img
-          src="/assets/header/hero.jpg"
-          alt=""
-          className="w-full h-64 md:h-64 md:w-auto img-object rounded-lg shadow-lg"
-        />
-        {/* </div> */}
+        <div className="w-full flex justify-center">
+          <img
+            src="/assets/about-img.jpg"
+            alt=""
+            className="w-full h-64 md:h-64 md:w-auto rounded-lg shadow-lg object-cover object-top"
+          />
+        </div>
+
         <div className="md:max-w-2xl">
           <h3 className="hidden md:block text-heading-serif section-heading text-2xl mb-8 relative z-10">
             Who am I
@@ -26,11 +27,12 @@ function HomeIntroduction(props) {
           </h4>
 
           <p>
-            Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan
-            dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi
-            standar contoh teks sejak tahun 1500an, saat seorang tukang cetak
-            yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya
-            untuk menjadi sebuah buku contoh huruf.{" "}
+            I have been making websites since 2018. Apart from being a
+            full-stack developer, I am also skilled in UI/UX design. In 2018, I
+            became the Vice Chair of the Media and Information division in my
+            college study program organization. In 2019, me and my team won a
+            silver medal in the 2019 KIWIE innovation competition held in Seoul,
+            South Korea.
           </p>
         </div>
       </div>
