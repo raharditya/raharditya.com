@@ -22,10 +22,10 @@ function projects(props) {
           property="og:description"
           content="Adit Raharditya is a full-stack web developer based in Yogyakarta, Indonesia."
         />
-        {/* <meta
+        <meta
           property="og:image"
-          content={`https://raharditya.com${currentProject?.thumbnail}`}
-        /> */}
+          content="https://raharditya.com/assets/general-thumb.jpg"
+        />
       </Head>
 
       <div className="relative px-6 mb-12">
