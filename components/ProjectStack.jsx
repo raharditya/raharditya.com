@@ -3,16 +3,16 @@ import React from "react";
 function ProjectStack(props) {
   return (
     <div
-      className="p-4 rounded-2xl mt-6"
+      className="p-3 md:p-4 rounded-2xl mt-6 md:flex md:justify-between project-text"
       style={{ backgroundColor: props.containerColor }}
     >
-      <div className="flex mb-4">
+      <div className="flex mb-3 md:mb-0 md:mr-4 md:w-4/6">
         <div
-          className="p-2 rounded-xl mr-4 flex-1"
+          className="p-2 rounded-xl mr-3 md:mr-4 flex-1"
           style={{ backgroundColor: props.bgColor }}
         >
           <h3
-            className="milliard-bold text-lg mb-2"
+            className="milliard-bold text-base md:mb-2"
             style={{ color: props.textColor }}
           >
             Links:
@@ -20,15 +20,21 @@ function ProjectStack(props) {
 
           <a
             href={props.link}
-            style={{ color: props.textColor }}
-            className="block"
+            style={{
+              color: props.textColor,
+              backgroundColor: props.containerColor,
+            }}
+            className="block py-1 px-2 rounded-md  mb-2"
           >
             Project
           </a>
           <a
             href={props.github}
-            style={{ color: props.textColor }}
-            className="block"
+            style={{
+              color: props.textColor,
+              backgroundColor: props.containerColor,
+            }}
+            className="block py-1 px-2 rounded-md "
           >
             Github
           </a>
@@ -39,7 +45,7 @@ function ProjectStack(props) {
           style={{ backgroundColor: props.bgColor }}
         >
           <h3
-            className="milliard-bold text-lg mb-2"
+            className="milliard-bold text-base md:mb-2"
             style={{ color: props.textColor }}
           >
             Stacks:
@@ -59,11 +65,11 @@ function ProjectStack(props) {
       </div>
 
       <div
-        className="p-2 rounded-xl text-center"
+        className="p-2 rounded-xl text-center md:text-left md:w-2/6"
         style={{ backgroundColor: props.bgColor }}
       >
         <h3
-          className="milliard-bold text-lg mb-2"
+          className="milliard-bold text-base md:mb-2"
           style={{ color: props.textColor }}
         >
           Year:
