@@ -213,9 +213,29 @@ html {
   }
 }
 
+.project-text {
+  font-size: 1.1rem;
+  z-index: 5;
+}
+
+.project-index {
+  font-size: 140px;
+  z-index: 0;
+
+  top: -4.5rem;
+  right: -0.6rem;
+}
+
+.header-hero {
+  object-fit: cover;
+  object-position: top center;
+  width: 300px;
+  height: 300px;
+}
+
 // FEATURED
 .featured-project {
-  height: 200px;
+  height: 500px;
   overflow: hidden;
 
   // &:hover {
@@ -379,6 +399,16 @@ nav {
 }
 
 @media screen and (max-width: 900px) {
+  .project-text {
+    font-size: 0.9rem;
+  }
+
+  .project-index {
+    font-size: 120px;
+    top: -4rem;
+    right: -0.6rem;
+  }
+
   .project-page-img {
     height: 16rem;
   }
