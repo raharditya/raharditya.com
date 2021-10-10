@@ -9,6 +9,8 @@ import FeaturedProject from "../components/FeaturedProject";
 import Project from "../components/Project";
 import Kkn from "../components/projects/Kkn";
 import Glegleg from "../components/projects/Glegleg";
+import Jadwal from "../components/projects/Jadwal";
+import Semnas from "../components/projects/Semnas";
 
 export default function Home() {
   return (
@@ -41,6 +43,8 @@ export default function Home() {
         <Stack />
         <Kkn />
         <Glegleg />
+        <Jadwal />
+        <Semnas />
         {/* <HomeIntroduction />
         <FeaturedProject />
         <Projects />
