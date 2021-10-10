@@ -6,6 +6,9 @@ import Projects from "../components/containers/Projects";
 import Invitation from "../components/Invitation";
 import HomeIntroduction from "../components/HomeIntroduction";
 import FeaturedProject from "../components/FeaturedProject";
+import Project from "../components/Project";
+import Kkn from "../components/projects/Kkn";
+import Glegleg from "../components/projects/Glegleg";
 
 export default function Home() {
   return (
@@ -35,11 +38,13 @@ export default function Home() {
 
       <div className="project-container">
         <HomeHeader />
-        <HomeIntroduction />
         <Stack />
+        <Kkn />
+        <Glegleg />
+        {/* <HomeIntroduction />
         <FeaturedProject />
         <Projects />
-        <Invitation />
+        <Invitation /> */}
       </div>
 
       {/* <div className="fixed p-4" style={{ left: "2rem", top: "4rem" }}>
