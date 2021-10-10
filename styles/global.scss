@@ -63,6 +63,24 @@ html {
   }
 }
 
+@font-face {
+  font-family: "Milliard Bold";
+  src: url(/assets/fonts/milliard_bold.otf);
+}
+
+@font-face {
+  font-family: "Milliard Book";
+  src: url(/assets/fonts/milliard_book.otf);
+}
+
+.milliard-book {
+  font-family: "Milliard Book";
+}
+
+.milliard-bold {
+  font-family: "Milliard Bold";
+}
+
 .text-heading-serif {
   font-family: "Playfair Display", serif;
   font-weight: 700;
@@ -197,12 +215,12 @@ html {
 
 // FEATURED
 .featured-project {
-  height: 400px;
+  height: 200px;
   overflow: hidden;
 
-  &:hover {
-    transform: translateY(-10px);
-  }
+  // &:hover {
+  //   transform: translateY(-10px);
+  // }
 
   .featured-ss-container {
     display: grid;
@@ -246,15 +264,15 @@ html {
 
 .featured-col-1 {
   transform: translateY(4rem);
-  animation: col-1 14s linear infinite;
+  // animation: col-1 14s linear infinite;
 }
 
 .featured-col-2 {
-  animation: col-2 16s linear infinite;
+  // animation: col-2 16s linear infinite;
 }
 
 .featured-col-3 {
-  animation: col-3 12s linear infinite;
+  // animation: col-3 12s linear infinite;
 }
 
 // END OF FEATURED
@@ -366,7 +384,7 @@ nav {
   }
 
   .featured-project {
-    height: 600px;
+    height: 300px;
 
     .featured-ss-container {
       transform: rotate(-29deg) translateX(10rem) scale(1.3);
