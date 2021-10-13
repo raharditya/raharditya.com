@@ -1,25 +1,25 @@
 import React from "react";
 
-export default function GleglegHeader() {
+export default function GleglegHeader(props) {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center" ref={props.gsapRef}>
       <img
         src="/assets/projects/glegleg/0.png"
         alt=""
-        className="z-10"
+        className="z-10 glegleg-main-img"
         style={{ height: 430 }}
       />
       <img
         src="/assets/projects/glegleg/1.png"
         alt=""
-        className="absolute z-0"
-        style={{ height: 360, transform: "translateX(0)", left: "1rem" }}
+        className="absolute z-0 glegleg-left-img"
+        style={{ height: 360 }}
       />
       <img
         src="/assets/projects/glegleg/2.png"
         alt=""
-        className="absolute z-0"
-        style={{ height: 360, transform: "translateX(0)", right: "1rem" }}
+        className="absolute z-0 glegleg-right-img"
+        style={{ height: 360 }}
       />
     </div>
   );

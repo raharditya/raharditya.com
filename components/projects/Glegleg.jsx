@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Project from "../Project";
 import ProjectStack from "../ProjectStack";
 import GleglegHeader from "./GleglegHeader";
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Glegleg() {
   const textColor = "#4D4833";
@@ -14,6 +17,43 @@ export default function Glegleg() {
   const github = "https://github.com";
   const stacks = ["React", "NodeJS"];
   const year = "December 2020";
+
+  gsap.registerPlugin(ScrollTrigger);
+  const gleglegHeader = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      gleglegHeader.current.querySelector(".glegleg-left-img"),
+      { x: 0 },
+      {
+        x: 100,
+        scrollTrigger: {
+          trigger: gleglegHeader.current,
+          start: "top bottom",
+          end: "top",
+          scrub: true,
+          // markers: true,
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      gleglegHeader.current.querySelector(".glegleg-right-img"),
+      { x: 0 },
+      {
+        x: -100,
+        scrollTrigger: {
+          trigger: gleglegHeader.current,
+          start: "top bottom",
+          end: "top",
+          scrub: true,
+          // markers: true,
+        },
+      }
+    );
+  }, []);
 
   return (
     <div>
@@ -39,7 +79,7 @@ export default function Glegleg() {
               Glegleg
             </h2>
 
-            <GleglegHeader />
+            <GleglegHeader gsapRef={gleglegHeader} />
 
             <div className="md:hidden">
               <ProjectStack
