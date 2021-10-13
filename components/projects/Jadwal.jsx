@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Project from "../Project";
 import ProjectStack from "../ProjectStack";
 import JadwalHeader from "./JadwalHeader";
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Jadwal() {
   const textColor = "#373737";
@@ -14,6 +17,97 @@ export default function Jadwal() {
   const github = "https://github.com";
   const stacks = ["React", "NodeJS"];
   const year = "July 2020";
+
+  gsap.registerPlugin(ScrollTrigger);
+  const jadwalHeader = useRef();
+
+  const jadwalDecor = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      jadwalHeader.current.querySelector(".jadwal-header-1"),
+      { rotate: 0 },
+      {
+        rotate: -3,
+        scrollTrigger: {
+          trigger: jadwalHeader.current,
+          start: "top bottom",
+          end: "top",
+          scrub: true,
+          markers: true,
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      jadwalHeader.current.querySelector(".jadwal-header-2"),
+      { rotate: 0, x: -50 },
+      {
+        rotate: 9,
+        x: 0,
+        scrollTrigger: {
+          trigger: jadwalHeader.current,
+          start: "top bottom",
+          end: "top",
+          scrub: true,
+          markers: true,
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      jadwalDecor.current.querySelector(".jadwal-decor-1"),
+      { rotate: 4.5 },
+      {
+        rotate: -2,
+        scrollTrigger: {
+          trigger: jadwalDecor.current,
+          start: "top bottom",
+          end: "top",
+          scrub: true,
+          markers: true,
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      jadwalDecor.current.querySelector(".jadwal-decor-2"),
+      { rotate: 8.5 },
+      {
+        rotate: 4,
+        scrollTrigger: {
+          trigger: jadwalDecor.current,
+          start: "top bottom",
+          end: "top",
+          scrub: true,
+          markers: true,
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      jadwalDecor.current.querySelector(".jadwal-decor-3"),
+      { rotate: -7 },
+      {
+        rotate: -9,
+        scrollTrigger: {
+          trigger: jadwalDecor.current,
+          start: "top bottom",
+          end: "top",
+          scrub: true,
+          markers: true,
+        },
+      }
+    );
+  }, []);
 
   return (
     <div>
@@ -47,7 +141,7 @@ export default function Jadwal() {
               AN FISIP UNS
             </small>
 
-            <JadwalHeader />
+            <JadwalHeader gsapRef={jadwalHeader} />
 
             <div className="md:hidden">
               <ProjectStack
@@ -92,12 +186,28 @@ export default function Jadwal() {
           </div>
         </div>
 
-        <div className="md:flex md:flex-row-reverse md:mt-12 mb-8">
-          <div className="md:w-1/2 flex items-center justify-center md:mr-8">
+        <div
+          className="md:flex md:flex-row-reverse md:mt-12 mb-8"
+          ref={jadwalDecor}
+        >
+          <div className="relative md:w-1/2 flex flex-col items-center justify-center md:mr-8">
             <img
-              src="/assets/projects/01-mid.png"
+              src="/assets/projects/jadwal/jadwal-decor-1.png"
               alt=""
-              className="my-8 w-full md:w-3/5"
+              className="relative w-56 jadwal-decor-1 ml-16 mb-6"
+              style={{ alignSelf: "start" }}
+            />
+            <img
+              src="/assets/projects/jadwal/jadwal-decor-2.png"
+              alt=""
+              className="relative w-64 jadwal-decor-2 mr-8 mb-6"
+              style={{ alignSelf: "end" }}
+            />
+            <img
+              src="/assets/projects/jadwal/jadwal-decor-3.png"
+              alt=""
+              className="relative w-56 jadwal-decor-3 ml-12"
+              style={{ alignSelf: "start" }}
             />
           </div>
 
