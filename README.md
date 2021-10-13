@@ -1,5 +1,5 @@
 ## raharditya.com
 
-This is the repo for my personal web.
+Archived version of my website
 
-There's nothing here yet, nothing meaningful anyway. But it's coming soon enough
+v2
