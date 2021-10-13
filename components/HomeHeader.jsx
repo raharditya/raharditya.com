@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Link from "next/link";
+import { gsap } from "gsap";
+
 import { useMediaQuery } from "./useMediaQuery";
 
 function HomeHeader(props) {
   const isDesktop = useMediaQuery("(max-width: 768px)");
+
+  const header = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(header.current, { opacity: 0 }, { opacity: 1 });
+  }, []);
 
   return (
     <header
       className="md:py-24 relative md:flex md:items-center"
       id="top"
       style={{ backgroundColor: "#DBC4F8" }}
+      ref={header}
     >
       <div className="md:flex md:container md:mx-auto px-6 pt-10 md:pt-0">
         <div className="md:w-1/2 md:mr-8">
           <p className="milliard-book text-white project-text">
             Hi, my name is
           </p>
-          <h1 className="milliard-bold mb-8 md: mb-0 text-3xl md:text-5xl text-white leading-none">
+          <h1 className="milliard-bold mb-8 md:mb-0 text-3xl md:text-5xl text-white leading-none">
             Muhammad Raharditya Athafitra
           </h1>
 
