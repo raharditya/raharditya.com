@@ -307,6 +307,11 @@ html::-webkit-scrollbar-thumb {
           transform: translateY(4rem);
 }
 
+.featured-col-3 {
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+}
+
 nav {
   height: 10vh;
   position: fixed;
