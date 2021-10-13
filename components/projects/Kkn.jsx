@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Project from "../Project";
 import ProjectStack from "../ProjectStack";
 import KknHeader from "./KknHeader";
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Kkn() {
   const textColor = "#4D3139";
@@ -14,6 +17,60 @@ export default function Kkn() {
   const github = "https://github.com";
   const stacks = ["React", "NodeJS"];
   const year = "July 2020";
+
+  gsap.registerPlugin(ScrollTrigger);
+  const kknHeader = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      kknHeader.current.querySelector(".featured-col-1"),
+      { y: 0 },
+      {
+        y: 200,
+        scrollTrigger: {
+          trigger: kknHeader.current,
+          start: "top bottom",
+          end: "top",
+          scrub: true,
+          // markers: true,
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      kknHeader.current.querySelector(".featured-col-2"),
+      { y: 0 },
+      {
+        y: -400,
+        scrollTrigger: {
+          trigger: kknHeader.current,
+          start: "top bottom",
+          end: "top",
+          scrub: true,
+          // markers: true,
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      kknHeader.current.querySelector(".featured-col-3"),
+      { y: -300 },
+      {
+        y: 50,
+        scrollTrigger: {
+          trigger: kknHeader.current,
+          start: "top bottom",
+          end: "top",
+          scrub: true,
+          // markers: true,
+        },
+      }
+    );
+  }, []);
 
   return (
     <div>
@@ -41,7 +98,7 @@ export default function Kkn() {
               Jogja
             </h2>
 
-            <KknHeader />
+            <KknHeader gsapRef={kknHeader} />
 
             <div className="md:hidden">
               <ProjectStack
