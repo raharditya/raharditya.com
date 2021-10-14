@@ -233,6 +233,13 @@ html {
   height: 300px;
 }
 
+.header-btn {
+  background-color: #c4aae3;
+  &:hover {
+    background-color: #b497d6;
+  }
+}
+
 // FEATURED
 .featured-project {
   height: 500px;
@@ -245,7 +252,9 @@ html {
   .featured-ss-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    transform: rotate(-29deg) translateX(10rem);
+    transform: rotate(-29deg) translateX(14rem);
+    justify-content: center;
+    max-width: 600px;
   }
 }
 
@@ -278,6 +287,7 @@ html {
 
 .featured-col {
   img {
+    margin: auto;
     margin-bottom: 1rem;
   }
 }
@@ -406,7 +416,7 @@ nav {
 
   .project-index {
     font-size: 120px;
-    top: -4rem;
+    top: -3rem;
     right: -0.6rem;
   }
 
