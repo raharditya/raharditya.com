@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Project from "../Project";
 import ProjectStack from "../ProjectStack";
 import SemnasHeader from "./SemnasHeader";
+import { useMediaQuery } from "../useMediaQuery";
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Semnas() {
   const textColor = "#4D4833";
@@ -10,10 +14,66 @@ export default function Semnas() {
   const indexColor = "#C2BA93";
   const containerColor = "#ACA47E";
 
-  const link = "https://github.com";
-  const github = "https://github.com";
-  const stacks = ["React", "NodeJS"];
-  const year = "July 2020";
+  const link = "https://determined-lamport-a34950.netlify.app/";
+  const github = "https://github.com/Asebodi/semnas-temu-admi";
+  const stacks = ["Gatsby", "Firebase"];
+  const year = "October 2020";
+
+  gsap.registerPlugin(ScrollTrigger);
+  const semnasHeader = useRef();
+
+  const isDesktop = useMediaQuery("(max-width: 768px)");
+
+  useEffect(() => {
+    gsap.fromTo(
+      semnasHeader.current.querySelector(".seminar-header-1"),
+      { y: 200 },
+      {
+        y: 0,
+        scrollTrigger: {
+          trigger: semnasHeader.current,
+          start: "top bottom",
+          end: "-=130",
+          scrub: true,
+          // markers: true,
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      semnasHeader.current.querySelector(".seminar-row-2"),
+      { y: -200 },
+      {
+        y: 0,
+        scrollTrigger: {
+          trigger: semnasHeader.current,
+          start: "top bottom",
+          end: "-=130",
+          scrub: true,
+          // markers: true,
+        },
+      }
+    );
+  }, []);
+
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     semnasHeader.current.querySelector(".seminar-header-3"),
+  //     { x: -700 },
+  //     {
+  //       x: 0,
+  //       scrollTrigger: {
+  //         trigger: semnasHeader.current,
+  //         start: "top bottom",
+  //         end: isDesktop ? "-105%" : "-120%",
+  //         scrub: true,
+  //         markers: true,
+  //       },
+  //     }
+  //   );
+  // }, []);
 
   return (
     <div>
@@ -30,8 +90,8 @@ export default function Semnas() {
         stacks={stacks}
         year={year}
       >
-        <div className="md:flex">
-          <div className="md:w-1/2 md:mr-8">
+        <div className="lg:flex">
+          <div className="lg:w-1/2 lg:mr-8">
             <h2
               className="milliard-bold text-3xl md:text-4xl leading-none"
               style={{ color: titleColor }}
@@ -47,9 +107,9 @@ export default function Semnas() {
               Temu Admi 2019
             </small>
 
-            <SemnasHeader />
+            <SemnasHeader gsapRef={semnasHeader} isDesktop={isDesktop} />
 
-            <div className="md:hidden">
+            <div className="lg:hidden mt-4">
               <ProjectStack
                 link={link}
                 github={github}
@@ -62,7 +122,7 @@ export default function Semnas() {
             </div>
           </div>
 
-          <div className="md:w-1/2 md:mt-12">
+          <div className="lg:w-1/2 lg:mt-12">
             <h3 className="milliard-bold text-2xl md:mb-6 text-white mt-6 mb-1">
               Implementation
             </h3>
@@ -82,7 +142,7 @@ export default function Semnas() {
               made.
             </p>
 
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <ProjectStack
                 link={link}
                 github={github}

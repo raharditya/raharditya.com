@@ -20,6 +20,8 @@ function ProjectStack(props) {
 
           <a
             href={props.link}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               color: props.textColor,
               backgroundColor: props.containerColor,
@@ -30,6 +32,8 @@ function ProjectStack(props) {
           </a>
           <a
             href={props.github}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               color: props.textColor,
               backgroundColor: props.containerColor,

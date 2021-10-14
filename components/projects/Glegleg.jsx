@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import Project from "../Project";
 import ProjectStack from "../ProjectStack";
 import GleglegHeader from "./GleglegHeader";
+import { useMediaQuery } from "../useMediaQuery";
 
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -13,24 +14,26 @@ export default function Glegleg() {
   const indexColor = "#DDC7C0";
   const containerColor = "#CEBEB9";
 
-  const link = "https://github.com";
-  const github = "https://github.com";
-  const stacks = ["React", "NodeJS"];
-  const year = "December 2020";
+  const link = "https://glegleg-id.web.app/";
+  const github = "https://github.com/Asebodi/glegeg-id";
+  const stacks = ["React", "Tailwind"];
+  const year = "January 2021";
 
   gsap.registerPlugin(ScrollTrigger);
   const gleglegHeader = useRef();
+
+  const isDesktop = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
     gsap.fromTo(
       gleglegHeader.current.querySelector(".glegleg-left-img"),
       { x: 0 },
       {
-        x: 100,
+        x: isDesktop ? 100 : 140,
         scrollTrigger: {
           trigger: gleglegHeader.current,
           start: "top bottom",
-          end: "top",
+          end: "-=130",
           scrub: true,
           // markers: true,
         },
@@ -43,11 +46,11 @@ export default function Glegleg() {
       gleglegHeader.current.querySelector(".glegleg-right-img"),
       { x: 0 },
       {
-        x: -100,
+        x: isDesktop ? -100 : -140,
         scrollTrigger: {
           trigger: gleglegHeader.current,
           start: "top bottom",
-          end: "top",
+          end: "-=130",
           scrub: true,
           // markers: true,
         },
@@ -70,8 +73,8 @@ export default function Glegleg() {
         stacks={stacks}
         year={year}
       >
-        <div className="md:flex">
-          <div className="md:w-1/2 md:mr-8">
+        <div className="lg:flex">
+          <div className="lg:w-1/2 lg:mr-8">
             <h2
               className="milliard-bold text-3xl md:text-4xl leading-none mb-4 md:mb-10"
               style={{ color: titleColor }}
@@ -81,7 +84,7 @@ export default function Glegleg() {
 
             <GleglegHeader gsapRef={gleglegHeader} />
 
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <ProjectStack
                 link={link}
                 github={github}
@@ -94,7 +97,7 @@ export default function Glegleg() {
             </div>
           </div>
 
-          <div className="md:w-1/2 md:mt-12">
+          <div className="lg:w-1/2 lg:mt-12">
             <h3
               className="milliard-bold text-2xl md:mb-6 mt-6 mb-1"
               style={{ color: titleColor }}
@@ -114,7 +117,7 @@ export default function Glegleg() {
               future orders will be much faster and easier.
             </p>
 
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <ProjectStack
                 link={link}
                 github={github}
@@ -128,16 +131,63 @@ export default function Glegleg() {
           </div>
         </div>
 
-        <div className="md:flex md:flex-row-reverse md:mt-12 mb-8">
-          <div className="md:w-1/2 flex items-center justify-center md:mr-8">
-            <img
-              src="/assets/projects/glegleg/mid.png"
-              alt=""
-              className="my-8 w-full md:w-3/5"
-            />
+        <div className="lg:flex lg:flex-row-reverse lg:mt-12 mb-8">
+          <div className="lg:w-1/2 flex items-center  justify-center lg:ml-8 my-12 lg:my-0">
+            <div className="relative">
+              <img
+                src="/assets/projects/glegleg/mid-main.png"
+                alt=""
+                className="my-8 relative z-10"
+                style={{ height: isDesktop ? 320 : 350, width: "auto" }}
+              />
+              <img
+                src="/assets/projects/glegleg/mid-tr.png"
+                alt=""
+                className="my-8 absolute z-20"
+                style={{
+                  height: 100,
+                  top: "-3rem",
+                  right: "-4rem",
+                  transform: "rotate(24deg)",
+                }}
+              />
+              <img
+                src="/assets/projects/glegleg/mid-tl.png"
+                alt=""
+                className="my-8 absolute z-0"
+                style={{
+                  height: 100,
+                  top: "-3rem",
+                  left: "-5rem",
+                  transform: "rotate(-16deg)",
+                }}
+              />
+              <img
+                src="/assets/projects/glegleg/mid-bl.png"
+                alt=""
+                className="my-8 absolute z-20"
+                style={{
+                  height: 100,
+                  bottom: "-3rem",
+                  left: "-5rem",
+                  transform: "rotate(-6deg)",
+                }}
+              />
+              <img
+                src="/assets/projects/glegleg/mid-br.png"
+                alt=""
+                className="my-8 absolute z-0"
+                style={{
+                  height: 120,
+                  bottom: "-3rem",
+                  right: "-7rem",
+                  transform: "rotate(14deg)",
+                }}
+              />
+            </div>
           </div>
 
-          <div className="md:w-1/2">
+          <div className="lg:w-1/2">
             <p className="mb-4 project-text" style={{ color: textColor }}>
               When it’s finished, they will be taken to Whatsapp chat with the
               business’ contact person with the order details as well as the

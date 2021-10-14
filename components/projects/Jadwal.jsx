@@ -13,10 +13,10 @@ export default function Jadwal() {
   const indexColor = "#D1D8DC";
   const containerColor = "#BBC9D1";
 
-  const link = "https://github.com";
-  const github = "https://github.com";
-  const stacks = ["React", "NodeJS"];
-  const year = "July 2020";
+  const link = "https://jadwal.raharditya.com/";
+  const github = "https://github.com/Asebodi/jadwal-pemadatan";
+  const stacks = ["React", "Sass"];
+  const year = "March 2020";
 
   gsap.registerPlugin(ScrollTrigger);
   const jadwalHeader = useRef();
@@ -32,9 +32,9 @@ export default function Jadwal() {
         scrollTrigger: {
           trigger: jadwalHeader.current,
           start: "top bottom",
-          end: "top",
+          end: "-=130",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
       }
     );
@@ -50,64 +50,64 @@ export default function Jadwal() {
         scrollTrigger: {
           trigger: jadwalHeader.current,
           start: "top bottom",
-          end: "top",
+          end: "-=130",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
       }
     );
   }, []);
 
-  useEffect(() => {
-    gsap.fromTo(
-      jadwalDecor.current.querySelector(".jadwal-decor-1"),
-      { rotate: 4.5 },
-      {
-        rotate: -2,
-        scrollTrigger: {
-          trigger: jadwalDecor.current,
-          start: "top bottom",
-          end: "top",
-          scrub: true,
-          markers: true,
-        },
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     jadwalDecor.current.querySelector(".jadwal-decor-1"),
+  //     { rotate: 4.5 },
+  //     {
+  //       rotate: -2,
+  //       scrollTrigger: {
+  //         trigger: jadwalDecor.current,
+  //         start: "top bottom",
+  //         end: "top",
+  //         scrub: true,
+  //         markers: true,
+  //       },
+  //     }
+  //   );
+  // }, []);
 
-  useEffect(() => {
-    gsap.fromTo(
-      jadwalDecor.current.querySelector(".jadwal-decor-2"),
-      { rotate: 8.5 },
-      {
-        rotate: 4,
-        scrollTrigger: {
-          trigger: jadwalDecor.current,
-          start: "top bottom",
-          end: "top",
-          scrub: true,
-          markers: true,
-        },
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     jadwalDecor.current.querySelector(".jadwal-decor-2"),
+  //     { rotate: 8.5 },
+  //     {
+  //       rotate: 4,
+  //       scrollTrigger: {
+  //         trigger: jadwalDecor.current,
+  //         start: "top bottom",
+  //         end: "top",
+  //         scrub: true,
+  //         markers: true,
+  //       },
+  //     }
+  //   );
+  // }, []);
 
-  useEffect(() => {
-    gsap.fromTo(
-      jadwalDecor.current.querySelector(".jadwal-decor-3"),
-      { rotate: -7 },
-      {
-        rotate: -9,
-        scrollTrigger: {
-          trigger: jadwalDecor.current,
-          start: "top bottom",
-          end: "top",
-          scrub: true,
-          markers: true,
-        },
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     jadwalDecor.current.querySelector(".jadwal-decor-3"),
+  //     { rotate: -7 },
+  //     {
+  //       rotate: -9,
+  //       scrollTrigger: {
+  //         trigger: jadwalDecor.current,
+  //         start: "top bottom",
+  //         end: "top",
+  //         scrub: true,
+  //         markers: true,
+  //       },
+  //     }
+  //   );
+  // }, []);
 
   return (
     <div>
@@ -124,8 +124,8 @@ export default function Jadwal() {
         stacks={stacks}
         year={year}
       >
-        <div className="md:flex">
-          <div className="md:w-1/2 md:mr-8">
+        <div className="lg:flex">
+          <div className="lg:w-1/2 lg:mr-8">
             <h2
               className="milliard-bold text-3xl md:text-4xl leading-none"
               style={{ color: titleColor }}
@@ -143,7 +143,7 @@ export default function Jadwal() {
 
             <JadwalHeader gsapRef={jadwalHeader} />
 
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <ProjectStack
                 link={link}
                 github={github}
@@ -156,7 +156,7 @@ export default function Jadwal() {
             </div>
           </div>
 
-          <div className="md:w-1/2 md:mt-12">
+          <div className="lg:w-1/2 lg:mt-12">
             <h3
               className="milliard-bold text-2xl md:mb-6 mt-6 mb-1"
               style={{ color: titleColor }}
@@ -172,7 +172,7 @@ export default function Jadwal() {
               issue.
             </p>
 
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <ProjectStack
                 link={link}
                 github={github}
@@ -187,33 +187,33 @@ export default function Jadwal() {
         </div>
 
         <div
-          className="md:flex md:flex-row-reverse md:mt-12 mb-8"
+          className="lg:flex lg:flex-row-reverse mt-8 lg:mt-12 mb-8"
           ref={jadwalDecor}
         >
-          <div className="relative md:w-1/2 flex flex-col items-center justify-center md:mr-8">
+          <div className="relative lg:w-1/2 flex flex-col items-center justify-center lg:ml-8">
             <img
               src="/assets/projects/jadwal/jadwal-decor-1.png"
               alt=""
-              className="relative w-56 jadwal-decor-1 ml-16 mb-6"
-              style={{ alignSelf: "start" }}
+              className="relative w-56 jadwal-decor-1 ml-16 md:ml-32 mb-10 md:mb-16"
+              style={{ alignSelf: "start", transform: "rotate(-2deg)" }}
             />
             <img
               src="/assets/projects/jadwal/jadwal-decor-2.png"
               alt=""
-              className="relative w-64 jadwal-decor-2 mr-8 mb-6"
-              style={{ alignSelf: "end" }}
+              className="relative w-64 jadwal-decor-2 mr-8 md:mr-16 mb-6"
+              style={{ alignSelf: "end", transform: "rotate(9deg)" }}
             />
             <img
               src="/assets/projects/jadwal/jadwal-decor-3.png"
               alt=""
-              className="relative w-56 jadwal-decor-3 ml-12"
-              style={{ alignSelf: "start" }}
+              className="relative w-56 jadwal-decor-3 ml-12 md:ml-24"
+              style={{ alignSelf: "start", transform: "rotate(-7deg)" }}
             />
           </div>
 
-          <div className="md:w-1/2">
+          <div className="lg:w-1/2">
             <h3
-              className="milliard-bold text-2xl md:mb-6 mt-6 mb-1"
+              className="milliard-bold text-2xl md:mb-6 mt-6 mb-1 md:mt-8 lg:mt-0"
               style={{ color: titleColor }}
             >
               Implementation

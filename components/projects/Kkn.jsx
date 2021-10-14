@@ -13,9 +13,9 @@ export default function Kkn() {
   const indexColor = "#F0A5BB";
   const containerColor = "#EB94AD";
 
-  const link = "https://github.com";
-  const github = "https://github.com";
-  const stacks = ["React", "NodeJS"];
+  const link = "https://kkn-covid-jogja.vercel.app/";
+  const github = "https://github.com/Asebodi/kkn-covid-jogja";
+  const stacks = ["React", "NodeJS", "MongoDB"];
   const year = "July 2020";
 
   gsap.registerPlugin(ScrollTrigger);
@@ -30,7 +30,7 @@ export default function Kkn() {
         scrollTrigger: {
           trigger: kknHeader.current,
           start: "top bottom",
-          end: "top",
+          end: "-=130",
           scrub: true,
           // markers: true,
         },
@@ -47,7 +47,7 @@ export default function Kkn() {
         scrollTrigger: {
           trigger: kknHeader.current,
           start: "top bottom",
-          end: "top",
+          end: "-=130",
           scrub: true,
           // markers: true,
         },
@@ -64,7 +64,7 @@ export default function Kkn() {
         scrollTrigger: {
           trigger: kknHeader.current,
           start: "top bottom",
-          end: "top",
+          end: "-=130",
           scrub: true,
           // markers: true,
         },
@@ -87,8 +87,8 @@ export default function Kkn() {
         stacks={stacks}
         year={year}
       >
-        <div className="md:flex">
-          <div className="md:w-1/2 md:mr-8">
+        <div className="lg:flex">
+          <div className="lg:w-1/2 lg:mr-8">
             <h2
               className="milliard-bold text-3xl md:text-4xl leading-none mb-4 md:mb-10"
               style={{ color: titleColor }}
@@ -100,7 +100,7 @@ export default function Kkn() {
 
             <KknHeader gsapRef={kknHeader} />
 
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <ProjectStack
                 link={link}
                 github={github}
@@ -113,7 +113,7 @@ export default function Kkn() {
             </div>
           </div>
 
-          <div className="md:w-1/2 md:mt-12">
+          <div className="lg:w-1/2 lg:mt-12">
             <h3 className="milliard-bold text-2xl md:mb-6 text-white mt-6 mb-1">
               Concept
             </h3>
@@ -133,7 +133,7 @@ export default function Kkn() {
               from 5 different sources, covering national and local news.
             </p>
 
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <ProjectStack
                 link={link}
                 github={github}
@@ -147,16 +147,47 @@ export default function Kkn() {
           </div>
         </div>
 
-        <div className="md:flex md:flex-row-reverse md:mt-12 mb-8">
-          <div className="md:w-1/2 flex items-center justify-center md:mr-8">
-            <img
-              src="/assets/projects/01-mid.png"
-              alt=""
-              className="my-8 w-full md:w-3/5"
-            />
+        <div className="lg:flex lg:justify-between lg:flex-row-reverse mt-8 lg:mt-12 mb-8">
+          <div className="lg:w-1/2 flex items-center justify-center lg:ml-8">
+            <div className="lg:w-3/5 flex items-center justify-center">
+              <div className="w-1/2 mr-4">
+                <img
+                  src="/assets/projects/kkn/l1.png"
+                  alt=""
+                  className="mb-4 w-full"
+                />
+                <img
+                  src="/assets/projects/kkn/l2.png"
+                  alt=""
+                  className="mb-4 w-full"
+                />
+                <img
+                  src="/assets/projects/kkn/l3.png"
+                  alt=""
+                  className="w-full"
+                />
+              </div>
+              <div className="w-1/2">
+                <img
+                  src="/assets/projects/kkn/r1.png"
+                  alt=""
+                  className="mb-4 w-full"
+                />
+                <img
+                  src="/assets/projects/kkn/r2.png"
+                  alt=""
+                  className="mb-4 w-full"
+                />
+                <img
+                  src="/assets/projects/kkn/r3.png"
+                  alt=""
+                  className="w-full"
+                />
+              </div>
+            </div>
           </div>
 
-          <div className="md:w-1/2">
+          <div className="lg:w-1/2">
             <h3 className="milliard-bold text-2xl md:mb-6 text-white mt-6 mb-1">
               Implementation
             </h3>

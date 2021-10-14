@@ -6,23 +6,77 @@ export default function Invitation() {
   const isDesktop = useMediaQuery("(max-width: 768px)");
 
   return (
-    <div className="invitation text-center md:container md:mx-auto px-6 relative mb-12">
-      <img src="/assets/invite-bg.svg" alt="" className="w-full" />
+    <div className="" style={{ backgroundColor: "#DBC4F8" }}>
+      <div className="text-center md:container md:mx-auto px-6 relative py-12 md:py-20">
+        <h3 className="text-white milliard-bold text-3xl md:text-4xl mb-8">
+          Thank you for reading!
+        </h3>
 
-      <div
-        className="py-10 md:py-24 backdrop-glass w-4/5 mx-auto rounded-lg absolute shadow-lg"
-        style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
-      >
-        <small className="text-light text-defocused block mb-2 md:mb-4">
-          Hire Me
-        </small>
-        <h2 className="font-bold text-xl md:text-3xl">Let's work Together</h2>
+        <p style={{ color: "#463160" }} className="text-sm">
+          Feel free to contact me at
+        </p>
+        <a
+          href="mailto:contact@raharditya.com"
+          className="font-bold underline project-text"
+          style={{ color: "#463160" }}
+        >
+          contact@raharditya.com
+        </a>
 
-        <Link href="/contact-me">
-          <a className="inline-block py-2 px-8 rounded-lg header-cta-bg hover:bg-green-500 transition duration-150 ease-in-out text-white text-sm md:text-base font-bold mt-6">
-            Get in touch
-          </a>
-        </Link>
+        <div
+          className="p-3 rounded-2xl mt-8 mx-auto"
+          style={{ backgroundColor: "#C4ABE3", width: "fit-content" }}
+        >
+          <div className="flex">
+            <a
+              href="https://github.com/Asebodi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mr-3"
+            >
+              <div className="bg-white hover:bg-gray-300 transition duration-150 flex items-center p-3 rounded-xl">
+                <img src="/assets/social/github.svg" alt="" className="h-6" />
+              </div>
+            </a>
+
+            <a
+              href="https://www.instagram.com/a.raharditya/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mr-3"
+            >
+              <div className="bg-white hover:bg-gray-300 transition duration-150 flex items-center p-3 rounded-xl">
+                <img
+                  src="/assets/social/instagram.svg"
+                  alt=""
+                  className="h-6"
+                />
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/muhammad-raharditya-athafitra-a17b201a9/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=""
+            >
+              <div className="bg-white hover:bg-gray-300 transition duration-150 flex items-center p-3 rounded-xl">
+                <img src="/assets/social/linkedin.svg" alt="" className="h-6" />
+              </div>
+            </a>
+          </div>
+
+          <div className="">
+            <Link href="/contact-me">
+              <a
+                className="bg-white hover:bg-gray-300 transition duration-150 block mt-3 rounded-xl py-2"
+                style={{ color: "#463160" }}
+              >
+                Contact me
+              </a>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

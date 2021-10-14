@@ -7,7 +7,7 @@ function Stack(props) {
   return (
     <div style={{ backgroundColor: "#DBC4F8" }}>
       <div className="text-center pt-20 md:pt-12 pb-24 md:container md:mx-auto">
-        <div className="px-6 mb-16">
+        <div className="px-6 mb-12 md:mb-16">
           <h3 className="text-left milliard-bold leading-none text-white text-3xl md:text-4xl mb-8">
             My Tech
             <br />
@@ -48,7 +48,13 @@ function Stack(props) {
           </div>
         </div>
 
-        <div className="">
+        <div
+          className=""
+          style={{
+            height: stackPos === 0 ? 272 : 120,
+            transition: "all 150ms ease-in-out",
+          }}
+        >
           {stackPos === 0 && (
             <>
               <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
@@ -65,7 +71,6 @@ function Stack(props) {
               </div>
             </>
           )}
-
           {stackPos === 1 && (
             <>
               <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">
@@ -75,7 +80,6 @@ function Stack(props) {
               </div>
             </>
           )}
-
           {stackPos === 2 && (
             <>
               <div className="flex items-center justify-center gap-8 md:gap-16 mt-8">

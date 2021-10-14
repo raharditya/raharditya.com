@@ -22,9 +22,7 @@ function HomeHeader(props) {
     >
       <div className="md:flex md:container md:mx-auto px-6 pt-10 md:pt-0">
         <div className="md:w-1/2 md:mr-8">
-          <p className="milliard-book text-white project-text">
-            Hi, my name is
-          </p>
+          <p className="text-white project-text">Hi, my name is</p>
           <h1 className="milliard-bold mb-8 md:mb-0 text-3xl md:text-5xl text-white leading-none">
             Muhammad Raharditya Athafitra
           </h1>
@@ -33,31 +31,31 @@ function HomeHeader(props) {
             <img
               src="/assets/header/hero.jpg"
               alt=""
-              className="header-hero rounded-xl shadow-lg mx-auto"
+              className="header-hero rounded-2xl shadow-lg mx-auto"
             />
 
             <div
-              className="p-3 flex rounded-lg mt-6 mx-auto"
+              className="p-3 flex rounded-2xl mt-6 mx-auto"
               style={{ backgroundColor: "#C4ABE3", width: "fit-content" }}
             >
               <a
-                href="https://github.com"
+                href="https://github.com/Asebodi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mr-3"
               >
-                <div className="bg-white flex items-center p-3 rounded-md">
+                <div className="bg-white flex items-center p-3 rounded-xl">
                   <img src="/assets/social/github.svg" alt="" className="h-6" />
                 </div>
               </a>
 
               <a
-                href="https://github.com"
+                href="https://www.instagram.com/a.raharditya/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mr-3"
               >
-                <div className="bg-white flex items-center p-3 rounded-md">
+                <div className="bg-white flex items-center p-3 rounded-xl">
                   <img
                     src="/assets/social/instagram.svg"
                     alt=""
@@ -67,17 +65,28 @@ function HomeHeader(props) {
               </a>
 
               <a
-                href="https://github.com"
+                href="https://www.linkedin.com/in/muhammad-raharditya-athafitra-a17b201a9/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=""
+                className="mr-3"
               >
-                <div className="bg-white flex items-center p-3 rounded-md">
+                <div className="bg-white flex items-center p-3 rounded-xl">
                   <img
                     src="/assets/social/linkedin.svg"
                     alt=""
                     className="h-6"
                   />
+                </div>
+              </a>
+
+              <a
+                href="mailto:contact@raharditya.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
+                <div className="bg-white flex items-center p-3 rounded-xl">
+                  <img src="/assets/social/mail.svg" alt="" className="h-6" />
                 </div>
               </a>
             </div>
@@ -103,10 +112,7 @@ function HomeHeader(props) {
             South Korea.
           </p>
           <Link href="/contact-me">
-            <a
-              className="py-2 px-5 font-bold rounded-xl text-lg"
-              style={{ backgroundColor: "#C4AAE3", color: "white" }}
-            >
+            <a className="header-btn transition duration-150 py-2 px-5 font-bold rounded-xl text-lg text-white">
               Contact me!
             </a>
           </Link>
@@ -116,30 +122,52 @@ function HomeHeader(props) {
           <img
             src="/assets/header/hero.jpg"
             alt=""
-            className="header-hero rounded-xl shadow-lg"
+            className="header-hero rounded-2xl shadow-lg"
           />
           <div
-            className="p-3 flex rounded-lg mt-6"
+            className="p-3 flex rounded-2xl mt-6"
             style={{ backgroundColor: "#C4ABE3" }}
           >
             <a
-              href="https://github.com"
+              href="https://github.com/Asebodi"
               target="_blank"
               rel="noopener noreferrer"
-              className="mr-3"
+              className="mr-3 header-social"
             >
-              <div className="bg-white flex items-center p-3 rounded-md">
+              <div className="bg-white hover:bg-gray-300 transition duration-150 flex items-center p-3 rounded-xl relative">
+                <div
+                  className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
+                  style={{
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    bottom: "-3rem",
+                    backgroundColor: "#71638E",
+                  }}
+                >
+                  Asebodi
+                </div>
                 <img src="/assets/social/github.svg" alt="" className="h-6" />
               </div>
             </a>
 
             <a
-              href="https://github.com"
+              href="https://www.instagram.com/a.raharditya/"
               target="_blank"
               rel="noopener noreferrer"
-              className="mr-3"
+              className="mr-3 header-social"
             >
-              <div className="bg-white flex items-center p-3 rounded-md">
+              <div className="bg-white hover:bg-gray-300 transition duration-150 flex items-center p-3 rounded-xl relative">
+                <div
+                  className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
+                  style={{
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    bottom: "-3rem",
+                    backgroundColor: "#71638E",
+                  }}
+                >
+                  @a.raharditya
+                </div>
                 <img
                   src="/assets/social/instagram.svg"
                   alt=""
@@ -149,13 +177,46 @@ function HomeHeader(props) {
             </a>
 
             <a
-              href="https://github.com"
+              href="https://www.linkedin.com/in/muhammad-raharditya-athafitra-a17b201a9/"
               target="_blank"
               rel="noopener noreferrer"
-              className=""
+              className="mr-3 header-social"
             >
-              <div className="bg-white flex items-center p-3 rounded-md">
+              <div className="bg-white hover:bg-gray-300 transition duration-150 flex items-center p-3 rounded-xl relative">
+                <div
+                  className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
+                  style={{
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    bottom: "-4.4rem",
+                    backgroundColor: "#71638E",
+                  }}
+                >
+                  Muh. Raharditya
+                </div>
                 <img src="/assets/social/linkedin.svg" alt="" className="h-6" />
+              </div>
+            </a>
+
+            <a
+              href="mailto:contact@raharditya.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="header-social"
+            >
+              <div className="bg-white hover:bg-gray-300 transition duration-150 flex items-center p-3 rounded-xl relative">
+                <div
+                  className="social-detail rounded-md absolute text-white py-1 px-2 text-sm group-hover:hidden"
+                  style={{
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    bottom: "-3rem",
+                    backgroundColor: "#71638E",
+                  }}
+                >
+                  contact@raharditya.com
+                </div>
+                <img src="/assets/social/mail.svg" alt="" className="h-6" />
               </div>
             </a>
           </div>
