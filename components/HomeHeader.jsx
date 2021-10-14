@@ -9,9 +9,9 @@ function HomeHeader(props) {
 
   const header = useRef();
 
-  useEffect(() => {
-    gsap.fromTo(header.current, { opacity: 0 }, { opacity: 1 });
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(header.current, { opacity: 0 }, { opacity: 1 });
+  // }, []);
 
   return (
     <header

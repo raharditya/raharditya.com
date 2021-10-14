@@ -76,81 +76,81 @@ export default function KknHeader(props) {
     >
       <div className="overflow-hidden test-class">
         <div className="featured-ss-container grid grid-cols-3">
-          <div className="featured-col featured-col-1">
+          <div className="featured-col featured-col-1 px-1 md:px-3">
             {/* START */}
             <img
-              src="/assets/featured/ss1.png"
+              src="/assets/projects/kkn/0.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
             <img
-              src="/assets/featured/ss2.png"
+              src="/assets/projects/kkn/4.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
 
             {/* COPY */}
             <img
-              src="/assets/featured/ss1.png"
+              src="/assets/projects/kkn/0.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
             <img
-              src="/assets/featured/ss2.png"
+              src="/assets/projects/kkn/4.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
           </div>
 
-          <div className="featured-col featured-col-2">
+          <div className="featured-col featured-col-2 px-1 md:px-3">
             {/* START */}
             <img
-              src="/assets/featured/ss2.png"
+              src="/assets/projects/kkn/1.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
             <img
-              src="/assets/featured/ss3.png"
+              src="/assets/projects/kkn/2.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
 
             {/* COPY */}
             <img
-              src="/assets/featured/ss2.png"
+              src="/assets/projects/kkn/1.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
             <img
-              src="/assets/featured/ss3.png"
+              src="/assets/projects/kkn/2.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
           </div>
 
-          <div className="featured-col featured-col-3">
+          <div className="featured-col featured-col-3 px-1 md:px-3">
             {/* START */}
             <img
-              src="/assets/featured/ss3.png"
+              src="/assets/projects/kkn/3.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
             <img
-              src="/assets/featured/ss4.png"
+              src="/assets/projects/kkn/4.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
 
             {/* COPY */}
             <img
-              src="/assets/featured/ss3.png"
+              src="/assets/projects/kkn/3.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
             <img
-              src="/assets/featured/ss4.png"
+              src="/assets/projects/kkn/4.png"
               alt=""
-              className="featured-ss"
+              className="featured-ss mb-2"
             />
           </div>
         </div>
