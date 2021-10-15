@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
       {/* <Nav /> */}
       <Component {...pageProps} isMobile={isMobile} />
       <Footer />
-      <Link href="#top">
+      <Link href="#__next">
         <a
           className={`scroll-to-top fixed p-4 rounded-md shadow-lg bg-white z-20 transition duration-150 ease-in-out ${
             showSTT ? "opacity-100" : "opacity-0"
