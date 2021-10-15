@@ -59,11 +59,11 @@ html::-webkit-scrollbar-thumb {
 }
 
 .milliard-book {
-  font-family: "Milliard Book";
+  font-family: "Milliard Book", sans-serif;
 }
 
 .milliard-bold {
-  font-family: "Milliard Bold";
+  font-family: "Milliard Bold", sans-serif;
 }
 
 .text-heading-serif {
