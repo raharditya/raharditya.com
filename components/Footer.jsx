@@ -1,7 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
-import SocialLink from "../SocialLink";
-import LastUpdate from "../LastUpdate";
 
 function Footer(props) {
   return (

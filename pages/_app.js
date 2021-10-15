@@ -1,4 +1,3 @@
-import Nav from "../components/Nav";
 import "../styles/tailwind.css";
 import { useState } from "react";
 import { useMediaQuery } from "../components/useMediaQuery";
@@ -7,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import "../styles/global.scss";
-import Footer from "../components/containers/Footer";
+import Footer from "../components/Footer";
 import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {

@@ -1,4 +1,4 @@
-import StackItem from "../StackItem";
+import StackItem from "./StackItem";
 import { useState } from "react";
 
 function Stack(props) {

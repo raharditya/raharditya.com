@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectStack from "./ProjectStack";
 
 export default function Project(props) {
   const titleSplit = props.title.split("/n");
@@ -27,8 +26,6 @@ export default function Project(props) {
     );
   }
 
-  // console.log(titleWithBreak);
-
   return (
     <div style={{ backgroundColor: props.bgColor }}>
       <div className="md:container md:mx-auto px-6 py-10 relative overflow-hidden">
@@ -40,19 +37,6 @@ export default function Project(props) {
         >
           {props.index}
         </h2>
-        {/* {titleWithBreak} */}
-
-        {/* {props.header} */}
-
-        {/* <ProjectStack
-          link={props.link}
-          github={props.github}
-          stacks={props.stacks}
-          year={props.year}
-          containerColor={props.containerColor}
-          bgColor={props.bgColor}
-          textColor={props.textColor}
-        /> */}
 
         {props.children}
       </div>
