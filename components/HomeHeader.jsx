@@ -39,7 +39,7 @@ function HomeHeader(props) {
               style={{ backgroundColor: "#C4ABE3", width: "fit-content" }}
             >
               <a
-                href="https://github.com/Asebodi"
+                href="https://github.com/raharditya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mr-3"
@@ -129,7 +129,7 @@ function HomeHeader(props) {
             style={{ backgroundColor: "#C4ABE3" }}
           >
             <a
-              href="https://github.com/Asebodi"
+              href="https://github.com/raharditya"
               target="_blank"
               rel="noopener noreferrer"
               className="mr-3 header-social"
@@ -144,7 +144,7 @@ function HomeHeader(props) {
                     backgroundColor: "#71638E",
                   }}
                 >
-                  Asebodi
+                  raharditya
                 </div>
                 <img src="/assets/social/github.svg" alt="" className="h-6" />
               </div>
