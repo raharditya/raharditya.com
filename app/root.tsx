@@ -1,11 +1,7 @@
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
-import "./tailwind.css";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
+
+import './styles/tailwind.css';
+import './styles/global.css';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,7 +12,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="font-jakarta">
         {children}
         <ScrollRestoration />
         <Scripts />
