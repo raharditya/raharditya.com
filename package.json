@@ -17,6 +17,7 @@
     "@remix-run/express": "^2.10.0",
     "@remix-run/node": "^2.9.2",
     "@remix-run/react": "^2.9.2",
+    "@vercel/remix": "^2.11.2",
     "clsx": "^2.1.1",
     "cross-env": "^7.0.3",
     "execa": "^9.3.0",
