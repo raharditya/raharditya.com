@@ -1,8 +1,58 @@
+@import '@flaticon/flaticon-uicons/css/solid/rounded';
+@import '@flaticon/flaticon-uicons/css/regular/rounded';
+@import '@flaticon/flaticon-uicons/css/brands/all';
+
 @font-face {
   font-family: 'Plus Jakarta Sans';
-  src: url('/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  src: url('/app/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* .noise {
+  background:
+    linear-gradient(#e9ecef 2px, transparent 2px),
+    url('/noise.svg') repeat;
+  filter: brightness(1000%) contrast(170%);
+} */
+
+/* .noise {
+  width: 400px;
+  height: 100px;
+  background: linear-gradient(to right, blue, rgba(0, 0, 0, 0)), url(https://grainy-gradients.vercel.app/noise.svg);
+} */
+
+.hero-bg {
+  background: linear-gradient(to bottom right, #e9ecef, #d9dcdf), url(/noise-large-xtra.svg);
+  /* filter: contrast(170%) brightness(300%); */
+  mix-blend-mode: multiply;
+}
+
+.projects-bg {
+  background: linear-gradient(to bottom, #264653, #3c6373), url(/noise-small.svg);
+}
+
+.stacks-bg {
+  background: linear-gradient(to bottom, transparent, #101a18), url(/noise-small.svg);
+  filter: contrast(110%) brightness(300%);
+}
+
+.stacks-overlay {
+  background: #e9f8f2;
+  mix-blend-mode: multiply;
 }
