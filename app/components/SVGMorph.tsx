@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
-import { interpolate } from 'flubber';
 import { motion, animate, useMotionValue, useTransform } from 'framer-motion';
+import flubber from 'flubber';
 
 type SVGMorphProps = {
   paths: string[];
 };
 
 const SVGMorprh = ({ paths }: SVGMorphProps) => {
+  const { interpolate } = flubber;
+
   const [currentPath, setCurrentPath] = useState(0);
   const progress = useMotionValue(currentPath);
 
