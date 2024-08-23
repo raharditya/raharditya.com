@@ -29,6 +29,9 @@ dependencies:
   cross-env:
     specifier: ^7.0.3
     version: 7.0.3
+  d3-polygon:
+    specifier: ^1.0.3
+    version: 1.0.6
   execa:
     specifier: ^9.3.0
     version: 9.3.0
@@ -59,6 +62,12 @@ dependencies:
   simplex-noise:
     specifier: ^4.0.3
     version: 4.0.3
+  svg-path-properties:
+    specifier: ^0.2.1
+    version: 0.2.2
+  svgpath:
+    specifier: ^2.2.1
+    version: 2.6.0
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0

@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "remix vite:build",
-    "dev": "node ./dev.js",
+    "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "NODE_ENV=production node ./build/index.js",
     "format": "prettier . --write",
     "typecheck": "tsc"
   },
@@ -20,6 +19,7 @@
     "@vercel/remix": "^2.11.2",
     "clsx": "^2.1.1",
     "cross-env": "^7.0.3",
+    "d3-polygon": "^1.0.3",
     "execa": "^9.3.0",
     "express": "^4.19.2",
     "flubber": "^0.4.2",
@@ -30,6 +30,8 @@
     "react-tooltip": "^5.27.1",
     "remix-utils": "^7.6.0",
     "simplex-noise": "^4.0.3",
+    "svg-path-properties": "^0.2.1",
+    "svgpath": "^2.2.1",
     "tailwind-merge": "^2.3.0",
     "zustand": "^4.5.4"
   },
