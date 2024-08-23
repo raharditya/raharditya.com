@@ -2,8 +2,6 @@ import { cn, getCurrentBreakpoint } from '~/lib/helper';
 import Container from '../../../components/Container';
 import { useEffect, useRef, useState } from 'react';
 
-import stacks from '~/data/techStacks';
-
 const data = [
   {
     title: 'Front-end',
@@ -61,8 +59,9 @@ const TechStacks = () => {
               key={d.title}
               ref={(ref) => (refs.current[i] = ref)}
               className={cn(
-                'group relative flex h-56 w-[280px] flex-shrink-0 snap-start scroll-mx-4 flex-col overflow-hidden rounded-xl border border-primary-dark bg-card-white p-4 transition-all lg:flex-shrink',
+                'group relative flex h-56 w-[280px] flex-shrink-0 snap-start scroll-mx-4 flex-col overflow-hidden rounded-xl border border-primary-dark bg-card-white p-4 transition-all lg:flex-shrink lg:hover:bg-accent-1',
                 'justify-end lg:w-[calc(100%/3-theme(spacing.4))] lg:hover:w-[60%]',
+                active === i && (breakpoint === 'sm' || breakpoint === 'md') && 'bg-accent-1',
               )}
             >
               {/* <div className="absolute bottom-0 left-0 top-0 isolate z-10 w-full">

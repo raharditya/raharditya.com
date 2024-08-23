@@ -23,19 +23,9 @@ export default function Index() {
         <Experiences />
         <AboutMe />
 
-        {/* <div className="space-y-8 pb-32 pt-28">
-          <h2 className="text-center text-2xl font-bold lg:text-4xl">
-            Ready to <span className="text-accent-1">Collaborate?</span>
-          </h2>
-          <CTA
-            primaryClassName="bg-primary-dark border-2 border-primary-light text-primary-light hover:bg-accent-2 hover:text-primary-dark"
-            secondaryClassName="bg-primary-dark border-2 border-primary-light text-primary-light hover:filter hover:bg-secondary-dark"
-          />
-        </div> */}
-
         <footer className="py-6 text-center">
-          <p className="text-sm font-bold">raharditya.com</p>
-          <p className="text-sm text-body-light">Last updated: June 2024</p>
+          <p className="text-sm font-semibold lg:font-bold">raharditya.com</p>
+          <p className="text-sm text-body-dark">Last updated: August 2024</p>
         </footer>
       </div>
     </>

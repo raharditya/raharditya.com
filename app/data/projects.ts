@@ -34,7 +34,7 @@ export default [
       {
         title: 'Remix.js Migration',
         items: [
-          `At Skilvul, we always strive to stay at the forefront of technology and implement the latest tools in our projects. For the development of Skilroom, we decided to use Next.js 13 with the new app router and Docker Swarm, as opposed to our usual Docker Compose setup.`,
+          `At Skilvul, we always strive to stay at the forefront of technology and implement the latest tools in our projects. For the development of Skilroom, we decided to upgrade to Next.js 13 with the new app router and Docker Swarm, as opposed to our usual Docker Compose setup.`,
           `As the lead developer, I needed to implement these new technologies and ensure they worked effectively for our project.`,
           `We began development using Next.js 13 with the app router. However, after deploying to our beta server, we encountered significant issues. There appeared to be a memory leak in Next.js 13, causing high RAM and CPU usage. We considered reverting to an earlier version of Next.js, but since we had already extensively used the app router, switching back to the pages router would require substantial refactoring and time.`,
           `After careful consideration, we decided to migrate from Next.js to Remix. We chose Remix because its routing system is similar to Next.js's app router, allowing us to maintain much of our existing file structure with minimal refactoring. We kept all other aspects of our tech stack unchanged during this migration.`,

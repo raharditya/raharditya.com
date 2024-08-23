@@ -26,14 +26,17 @@ const ProjectDetailsModal = ({ isOpen, onClose }: ProjectDetailsModalProps) => {
     <Modal
       isOpen={isOpen}
       onClose={closeModal}
-      className="max-h-[80vh] w-[90vw] rounded-b-none lg:max-h-[90vh] lg:w-[90%] lg:max-w-[1350px] lg:rounded-2xl"
+      className="h-[85vh] w-[90vw] lg:h-[90vh] lg:w-[90%] lg:max-w-[1350px] lg:rounded-2xl"
     >
-      <button className="absolute -top-10 right-4 h-8 w-8 text-primary-light" onClick={closeModal}>
+      <button
+        className="absolute -top-10 right-4 h-8 w-8 rounded-lg bg-primary-light text-primary-dark transition hover:brightness-90 lg:bg-transparent lg:text-primary-light"
+        onClick={closeModal}
+      >
         <i className="fi fi-rr-cross-small flex h-8 w-8 items-center justify-center text-2xl" />
       </button>
 
-      <div className="max-h-[80vh] overflow-y-scroll rounded-b-xl p-6 lg:max-h-[90vh]">
-        <div className="mb-6 flex justify-between">
+      <div className="max-h-[80vh] overflow-y-scroll p-6 lg:max-h-[90vh]">
+        <div className="mb-6 flex flex-col justify-between lg:flex-row">
           <h2 className="flex-1 text-xl font-bold">{project?.name}</h2>
 
           <p className="text-sm">July 2021</p>
@@ -41,7 +44,7 @@ const ProjectDetailsModal = ({ isOpen, onClose }: ProjectDetailsModalProps) => {
 
         <div className="flex flex-col justify-between gap-12 lg:flex-row">
           <div className="flex-1 space-y-6">
-            <div className="h-[400px] w-full rounded-2xl bg-gray-300">
+            <div className="h-[230px] w-full rounded-2xl bg-gray-300 lg:h-[400px]">
               <img
                 src={project?.thumbnailPictureUrl}
                 alt={project?.name}

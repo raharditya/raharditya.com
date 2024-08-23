@@ -79,12 +79,11 @@ const Projects = () => {
     <>
       <Container className="px-4">
         <div className="py-16" ref={ref} style={{ height: `${(projects.length + 1) * 100}vh` }}>
-          {/* Container */}
           <div className="sticky top-8 space-y-6">
             <h2 className="text-2xl font-bold text-accent-3 lg:text-3xl">Projects</h2>
 
-            <div className="projects-bg relative rounded-2xl p-6 pr-10 text-primary-light bg-blend-multiply lg:h-[80vh] lg:max-h-[800px]">
-              <div className="absolute right-[17px] top-8 space-y-1.5">
+            <div className="projects-bg relative rounded-2xl p-6 text-primary-light bg-blend-multiply lg:h-[80vh] lg:max-h-[800px] lg:pr-10">
+              <div className="absolute right-[8px] top-8 space-y-1.5 lg:right-[17px]">
                 {[...new Array(projects.length)].map((_, i) => (
                   <div
                     key={i}
@@ -107,11 +106,11 @@ const Projects = () => {
                   <AnimatePresence>
                     {!transitioning && (
                       <motion.div
-                        className="flex h-full flex-col items-start justify-center gap-8"
+                        className="flex h-full flex-col items-start justify-center gap-8 lg:gap-8"
                         exit={{ opacity: 0 }}
                       >
                         <motion.h3
-                          className="text-3xl font-bold"
+                          className="text-xl font-bold lg:text-3xl"
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.2 }}
@@ -119,13 +118,18 @@ const Projects = () => {
                           {projects[activeIndex].name}
                         </motion.h3>
 
-                        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
+                        <motion.p
+                          className="-mt-4 text-sm lg:text-base"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.5 }}
+                        >
                           {projects[activeIndex].shortDescription}
                         </motion.p>
 
                         <motion.button
                           className={cn(
-                            'flex items-center space-x-8 rounded-full border-2 border-primary-dark px-4 py-2 text-center font-semibold text-primary-dark transition',
+                            'flex items-center space-x-8 rounded-full border-2 border-primary-dark px-4 py-2 text-center text-sm font-medium text-primary-dark transition lg:text-base',
                             'bg-white hover:brightness-90 hover:filter',
                           )}
                           initial={{ opacity: 0 }}
