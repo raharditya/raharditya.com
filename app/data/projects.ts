@@ -1,6 +1,7 @@
 type Project = {
   slug: string;
   name: string;
+  date: string;
   stacks: { title: string; type: number }[];
   thumbnailPictureUrl: string;
   description: string;
@@ -15,7 +16,15 @@ export default [
   {
     slug: 'skilroom',
     name: 'Skilroom',
-    stacks: [{ title: 'react', type: 0 }],
+    date: 'Aug 2023 - Jun 2024',
+    stacks: [
+      { title: 'Remix', type: 0 },
+      { title: 'TailwindCSS', type: 0 },
+      { title: 'Go', type: 1 },
+      { title: 'PostgreSQL', type: 1 },
+      { title: 'Redis', type: 1 },
+      { title: 'Moon Monorepo', type: 2 },
+    ],
     thumbnailPictureUrl: '/projects/skilroom-thumbnail.webp',
     description:
       'An educational SaaS within Skilvul that empowers educators to build their own learning platforms. These platforms enable educators to manage student admissions, organize learning activities, and create syllabuses—all while generating income from their customized educational space.',
@@ -64,7 +73,16 @@ export default [
   {
     slug: 'bootcamp-platform',
     name: 'Bootcamp Platform',
-    stacks: [{ title: 'react', type: 0 }],
+    date: 'Mar 2022 - Aug 2023',
+    stacks: [
+      { title: 'NextJS', type: 0 },
+      { title: 'ChakraUI', type: 0 },
+      { title: 'Go', type: 1 },
+      { title: 'PostgreSQL', type: 1 },
+      { title: 'Redis', type: 1 },
+      { title: 'GraphQL', type: 1 },
+      { title: 'RabbitMQ', type: 1 },
+    ],
     thumbnailPictureUrl: '/projects/program-thumbnail.webp',
     description:
       'A holistic Learning Management System to manage all bootcamp activities in Skilvul. It ranges from the admin dashboard and student catalog page to the student dashboard. The platform allows admins to manage bootcamps as well as students to submit assignments, access bootcamp learning materials, view their scorecards, and request absences.',
@@ -102,7 +120,16 @@ export default [
   {
     slug: 'certificate-generator',
     name: 'Certificate Generator',
-    stacks: [{ title: 'react', type: 0 }],
+    date: 'Jun 2023 - Sep 2023',
+    stacks: [
+      { title: 'NextJS', type: 0 },
+      { title: 'ChakraUI', type: 0 },
+      { title: 'Go', type: 1 },
+      { title: 'PostgreSQL', type: 1 },
+      { title: 'Redis', type: 1 },
+      { title: 'GraphQL', type: 1 },
+      { title: 'PDF Turtle', type: 2 },
+    ],
     thumbnailPictureUrl: '/projects/certificate-thumbnail.webp',
     description: `An internal tool used to generate PDF certificates in bulk and asynchronously, with seamless integration into Skilvul's user base. Generated certificates can be linked to any bootcamp in Skilvul and appear on individual students' bootcamp dashboards. This empowers Skilvul to efficiently create and distribute certificates for bootcamp participants upon program completion, ensuring students receive their credentials promptly and enhancing their overall platform experience.`,
     shortDescription: `An internal tool for bulk PDF certificate generation, integrated with Skilvul's user base. It allows seamless linking of certificates to bootcamps, displaying them on students' dashboards, and ensuring timely distribution upon program completion.`,
@@ -131,7 +158,14 @@ export default [
   {
     slug: 'kkn-covid-jogja',
     name: 'KKN Covid Jogja',
-    stacks: [{ title: 'react', type: 0 }],
+    date: 'Jul 2020',
+    stacks: [
+      { title: 'React', type: 0 },
+      { title: 'NodeJS', type: 1 },
+      { title: 'MongoDB', type: 1 },
+      { title: 'Puppeteer', type: 1 },
+      { title: 'Cheerio', type: 1 },
+    ],
     thumbnailPictureUrl: '/projects/kkn-thumbnail.webp',
     description: `A progressive web app developed for my college's Community Service Program, conducted online due to the COVID-19 pandemic. This project aims to educate people about the novel coronavirus, featuring up-to-date data on COVID-19 cases and credible news from multiple outlets. It utilizes web scrapers that run automatically daily via cron jobs to keep the information current, making the app a reliable source during the rapidly evolving pandemic situation.`,
     shortDescription: `An online progressive web app for my college's Community Service Program that provides up-to-date COVID-19 data and news using daily automated web scrapers.`,

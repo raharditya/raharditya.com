@@ -26,20 +26,20 @@ const ProjectDetailsModal = ({ isOpen, onClose }: ProjectDetailsModalProps) => {
     <Modal
       isOpen={isOpen}
       onClose={closeModal}
-      className="h-[85vh] w-[90vw] lg:h-[90vh] lg:w-[90%] lg:max-w-[1350px] lg:rounded-2xl"
+      className="h-[90vh] w-[90vw] lg:h-[90vh] lg:w-[90%] lg:max-w-[1350px] lg:rounded-2xl"
     >
       <button
-        className="absolute -top-10 right-4 h-8 w-8 rounded-lg bg-primary-light text-primary-dark transition hover:brightness-90 lg:bg-transparent lg:text-primary-light"
+        className="absolute right-6 top-6 h-8 w-8 rounded-lg bg-primary-light text-primary-dark shadow-lg transition hover:brightness-90 lg:-top-10 lg:right-4 lg:bg-transparent lg:text-primary-light lg:shadow-none"
         onClick={closeModal}
       >
         <i className="fi fi-rr-cross-small flex h-8 w-8 items-center justify-center text-2xl" />
       </button>
 
-      <div className="max-h-[80vh] overflow-y-scroll p-6 lg:max-h-[90vh]">
-        <div className="mb-6 flex flex-col justify-between lg:flex-row">
+      <div className="max-h-[90vh] overflow-y-scroll p-6 lg:max-h-[90vh]">
+        <div className="mb-6 flex flex-col justify-between pr-10 lg:flex-row lg:pr-0">
           <h2 className="flex-1 text-xl font-bold">{project?.name}</h2>
 
-          <p className="text-sm">July 2021</p>
+          <p className="text-sm">{project?.date}</p>
         </div>
 
         <div className="flex flex-col justify-between gap-12 lg:flex-row">
@@ -57,9 +57,23 @@ const ProjectDetailsModal = ({ isOpen, onClose }: ProjectDetailsModalProps) => {
             <div className="space-y-4">
               <h3 className="text-lg font-bold">Stacks</h3>
 
-              <div className="flex w-fit items-center gap-2 rounded-full bg-[#E0E0E0] p-2 pr-3">
-                <div className="h-4 w-4 rounded-full bg-primary-dark" />
-                <p className="text-sm leading-none">React</p>
+              <div className="flex flex-wrap gap-2">
+                {project?.stacks.map((stack, i) => (
+                  <div
+                    key={i}
+                    className="flex w-fit items-center gap-2 rounded-full border border-card-border bg-card-white p-2 pr-3"
+                  >
+                    <div
+                      className={cn(
+                        'h-4 w-4 rounded-full',
+                        stack.type === 0 && 'bg-accent-1',
+                        stack.type === 1 && 'bg-accent-3',
+                        stack.type === 2 && 'bg-accent-2',
+                      )}
+                    />
+                    <p className="text-sm leading-none text-body-dark">{stack.title}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

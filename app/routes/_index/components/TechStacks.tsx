@@ -9,11 +9,11 @@ const data = [
   },
   {
     title: 'Back-end',
-    stacks: ['Go', 'NodeJS', 'PostgreSQL', 'Amazon Web Services (AWS)', 'Redis', 'GraphQL'],
+    stacks: ['Go', 'NodeJS', 'PostgreSQL', 'RabbitMQ', 'Redis', 'GraphQL'],
   },
   {
     title: 'Others',
-    stacks: ['Docker & Docker Swarm', 'Git', 'Linux CLI', 'Figma', 'CI/CD'],
+    stacks: ['Docker & Docker Swarm', 'Amazon Web Services (AWS)', 'Git', 'Linux CLI', 'Figma', 'CI/CD'],
   },
 ];
 

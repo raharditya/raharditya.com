@@ -1,75 +1,9 @@
 import { useState } from 'react';
+
 import AnimateChangeInHeight from '~/components/AnimateChangeInHeight';
 import Container from '~/components/Container';
-import projects from '~/data/projects';
-import { cn } from '~/lib/helper';
 
-const data = [
-  {
-    company: 'Skilvul',
-    location: 'Jakarta, Indonesia',
-    role: 'Full-stack Web Developer',
-    year: '2021 - 2024',
-    pictureUrl: '/skilvul-head.png',
-    // pictureUrl: import.meta.env.BASE_URL + '/skilvul-head.png',
-    description:
-      'Skilvul is a premier edu-tech company focused on transforming coding education. The platform provides an extensive range of interactive courses, real-world projects, and personalized mentorship, catering to learners of all ages and skill levels',
-    projects: [
-      {
-        slug: 'skilroom',
-        name: 'SkilRoom',
-        pictureUrl: '/skilroom.png',
-      },
-      {
-        slug: 'program-platform',
-        name: 'Bootcamp Platform',
-        pictureUrl: '/skilroom.png',
-      },
-      {
-        slug: 'certificate-generator',
-        name: 'Certificate Generator',
-        pictureUrl: '/skilroom.png',
-      },
-    ],
-    highligths: [
-      'Skilvul is a premier edu-tech company focused on transforming coding education.',
-      'The platform provides an extensive range of interactive courses, real-world projects.',
-      'And personalized mentorship, catering to learners of all ages and skill levels.',
-    ],
-  },
-  {
-    company: 'Freelance',
-    location: 'Yogyakarta, Indonesia',
-    role: 'Full-stack Web Developer',
-    year: '2019 - 2021',
-    // pictureUrl: '/skilvul-head.png',
-    // pictureUrl: import.meta.env.BASE_URL + '/skilvul-head.png',
-    description:
-      'When I was in college, I started to take freelance projects. I have worked with various clients from different countries. I have developed websites, web applications, and mobile applications.',
-    projects: [
-      {
-        slug: 'skilroom',
-        name: 'SkilRoom',
-        pictureUrl: '/skilroom.png',
-      },
-      {
-        slug: 'program-platform',
-        name: 'Bootcamp Platform',
-        pictureUrl: '/skilroom.png',
-      },
-      {
-        slug: 'certificate-generator',
-        name: 'Certificate Generator',
-        pictureUrl: '/skilroom.png',
-      },
-    ],
-    highligths: [
-      'Skilvul is a premier edu-tech company focused on transforming coding education.',
-      'The platform provides an extensive range of interactive courses, real-world projects.',
-      'And personalized mentorship, catering to learners of all ages and skill levels.',
-    ],
-  },
-];
+import { cn } from '~/lib/helper';
 
 const Experiences = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -91,7 +25,7 @@ const Experiences = () => {
                 <div className="flex items-center gap-2 text-body-dark">
                   <p>Skilvul</p>
                   <div className="h-1.5 w-1.5 rounded-full bg-body-dark" />
-                  <p>Sep 2021 - Jul 2024 (2 yrs 6 mos)</p>
+                  <p>Sep 2021 - Jul 2024 (2 yrs 8 mos)</p>
                 </div>
               </div>
 
@@ -106,10 +40,9 @@ const Experiences = () => {
                     <div className="flex-1 space-y-2">
                       <h4 className="font-semibold lg:text-lg">Description</h4>
                       <p className="text-body-dark">
-                        I have been making websites since 2018. Apart from being a full-stack developer, I am also
-                        skilled in UI/UX design. In 2018, I became the Vice Chair of the Media and Information division
-                        in my college study program organization. In 2019, me and my team won a silver medal in the 2019
-                        KIWIE innovation competition held in Seoul, South Korea.
+                        I worked at an edu-tech company specializing in online classes and bootcamps for the technology
+                        sector. My responsibilities included developing and maintaining high-quality web applications,
+                        encompassing front-end, back-end, and some DevOps tasks.
                       </p>
                     </div>
 
@@ -117,11 +50,22 @@ const Experiences = () => {
                       <h4 className="font-semibold lg:text-lg">Key Responsibilities</h4>
                       <p className="text-body-dark">
                         <ul className="list-disc pl-4">
-                          <li>Skilvul is a premier edu-tech company focused on transforming coding education.</li>
                           <li>
-                            The platform provides an extensive range of interactive courses, real-world projects.{' '}
+                            Ensured code quality with unit testing and continuous integration. Collaborated with
+                            cross-functional teams to streamline development processes and optimize performance.
                           </li>
-                          <li>and personalized mentorship, catering to learners of all ages and skill levels.</li>
+                          <li>
+                            Integrated AI and machine learning for user performance prediction as part of my OKR
+                            assignment using existing data from more than 1500 users.
+                          </li>
+                          <li>
+                            Invited as a speaker for the publicly available company-hosted webinar 3 times and attended
+                            by a total of 600+ students across Indonesia.
+                          </li>
+                          <li>
+                            Maintained service uptime, ensuring uninterrupted platform access through proactive
+                            monitoring, quick troubleshooting, and robust solutions for a high-quality user experience.
+                          </li>
                         </ul>
                       </p>
                     </div>

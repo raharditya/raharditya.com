@@ -3,7 +3,7 @@ import Container from '../../../components/Container';
 const AboutMe = () => {
   return (
     <Container>
-      <div className="space-y-6 py-14">
+      <div className="space-y-6 py-14" id="about-me">
         <h2 className="text-2xl font-bold text-accent-3 lg:text-3xl">About Me</h2>
 
         <div className="flex flex-col items-start gap-8 lg:flex-row">
@@ -15,10 +15,10 @@ const AboutMe = () => {
 
           <div className="space-y-6 lg:w-[60%]">
             <p className="rounded-xl border border-card-border bg-card-white px-6 py-4 leading-7 opacity-75">
-              I have been making websites since 2018. Apart from being a full-stack developer, I am also skilled in
-              UI/UX design. In 2018, I became the Vice Chair of the Media and Information division in my college study
-              program organization. In 2019, me and my team won a silver medal in the 2019 KIWIE innovation competition
-              held in Seoul, South Korea.
+              A dedicated and versatile Fullstack Web Developer with three years of professional experience. I
+              specialize in creating robust, scalable, and efficient web applications. My expertise spans both front-end
+              and back-end development, fueled by a passion for continuous learning that drives me to stay updated with
+              the latest technologies.
             </p>
 
             <div className="space-y-4">
@@ -26,21 +26,23 @@ const AboutMe = () => {
 
               <div className="flex flex-col items-center justify-center gap-4 lg:flex-row">
                 <a
-                  href=""
-                  className="flex items-center gap-2 rounded-full border border-card-border bg-card-white p-2 pr-4 text-body-dark"
+                  href="mailto:contact@raharditya.com"
+                  className="flex items-center gap-2 rounded-full border border-card-border bg-card-white p-2 pr-4 text-body-dark transition hover:brightness-95"
+                  target="_blank"
                 >
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-light">
-                    <img src="/email.svg" alt="" />
+                    <img src="/email.svg" alt="Email Logo" />
                   </div>
                   contact@raharditya.com
                 </a>
 
                 <a
-                  href=""
-                  className="flex items-center gap-2 rounded-full border border-card-border bg-card-white p-2 pr-4 text-body-dark"
+                  href="https://www.linkedin.com/in/raharditya/"
+                  className="flex items-center gap-2 rounded-full border border-card-border bg-card-white p-2 pr-4 text-body-dark transition hover:brightness-95"
+                  target="_blank"
                 >
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-light">
-                    <img src="/linkedin.svg" alt="" />
+                    <img src="/linkedin.svg" alt="LinkedIn Logo" />
                   </div>
                   Muhammad Raharditya A.
                 </a>

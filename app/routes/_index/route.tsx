@@ -7,8 +7,10 @@ import Experiences from './components/Experiences';
 import Projects from './components/Projects';
 
 export const meta: MetaFunction = () => {
-  // TODO: Update meta
-  return [{ title: 'Raharditya' }, { name: 'description', content: 'Welcome to Remix!' }];
+  return [
+    { title: 'Raharditya' },
+    { name: 'description', content: `Hi! I'm a Full-stack Web Developer based in Indonesia. Ready to work together?` },
+  ];
 };
 
 export default function Index() {
