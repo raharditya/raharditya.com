@@ -3,6 +3,7 @@ type Project = {
   name: string;
   date: string;
   stacks: { title: string; type: number }[];
+  videoUrl?: string;
   thumbnailPictureUrl: string;
   description: string;
   shortDescription: string;
@@ -26,6 +27,7 @@ export default [
       { title: 'Moon Monorepo', type: 2 },
     ],
     thumbnailPictureUrl: '/projects/skilroom-thumbnail.webp',
+    videoUrl: '/projects/videos/skilroom.mp4',
     description:
       'An educational SaaS within Skilvul that empowers educators to build their own learning platforms. These platforms enable educators to manage student admissions, organize learning activities, and create syllabuses—all while generating income from their customized educational space.',
     shortDescription:
@@ -84,6 +86,7 @@ export default [
       { title: 'RabbitMQ', type: 1 },
     ],
     thumbnailPictureUrl: '/projects/program-thumbnail.webp',
+    videoUrl: '/projects/videos/program.mp4',
     description:
       'A holistic Learning Management System to manage all bootcamp activities in Skilvul. It ranges from the admin dashboard and student catalog page to the student dashboard. The platform allows admins to manage bootcamps as well as students to submit assignments, access bootcamp learning materials, view their scorecards, and request absences.',
     shortDescription: `A comprehensive Learning Management System for Skilvul that manages all bootcamp activities, including admin and student dashboards. It enables admins to manage bootcamps and allows students to submit assignments, access materials, view scores, and request absences.`,
@@ -131,6 +134,7 @@ export default [
       { title: 'PDF Turtle', type: 2 },
     ],
     thumbnailPictureUrl: '/projects/certificate-thumbnail.webp',
+    videoUrl: '/projects/videos/certificate.mp4',
     description: `An internal tool used to generate PDF certificates in bulk and asynchronously, with seamless integration into Skilvul's user base. Generated certificates can be linked to any bootcamp in Skilvul and appear on individual students' bootcamp dashboards. This empowers Skilvul to efficiently create and distribute certificates for bootcamp participants upon program completion, ensuring students receive their credentials promptly and enhancing their overall platform experience.`,
     shortDescription: `An internal tool for bulk PDF certificate generation, integrated with Skilvul's user base. It allows seamless linking of certificates to bootcamps, displaying them on students' dashboards, and ensuring timely distribution upon program completion.`,
     highligts: [
@@ -167,6 +171,7 @@ export default [
       { title: 'Cheerio', type: 1 },
     ],
     thumbnailPictureUrl: '/projects/kkn-thumbnail.webp',
+    videoUrl: '/projects/videos/kkn.mp4',
     description: `A progressive web app developed for my college's Community Service Program, conducted online due to the COVID-19 pandemic. This project aims to educate people about the novel coronavirus, featuring up-to-date data on COVID-19 cases and credible news from multiple outlets. It utilizes web scrapers that run automatically daily via cron jobs to keep the information current, making the app a reliable source during the rapidly evolving pandemic situation.`,
     shortDescription: `An online progressive web app for my college's Community Service Program that provides up-to-date COVID-19 data and news using daily automated web scrapers.`,
     highligts: [

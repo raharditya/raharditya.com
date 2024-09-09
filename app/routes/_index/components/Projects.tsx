@@ -1,17 +1,17 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ClientOnly } from 'remix-utils/client-only';
 import Container from '~/components/Container';
 import ProjectDetailsModal from '~/components/project-details/ProjectDetailsModal';
 import { cn } from '~/lib/helper';
 import Video from './Video';
 import { useProjectStore } from '~/lib/stores/useProjectStore';
 import projects from '~/data/projects';
+import useUserAgent from '~/lib/hooks/useUserAgent';
 
 const Projects = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { isOpen, onOpen, onClose } = useProjectStore();
-  // const { height } = useWindowDimensions();
+  const [_, os] = useUserAgent();
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -137,11 +137,11 @@ const Projects = () => {
                           transition={{ delay: 0.7 }}
                           onClick={() => {
                             onOpen(projects[activeIndex].slug);
-                            window.history.replaceState(
-                              null,
-                              projects[activeIndex].name,
-                              `/${projects[activeIndex].slug}`,
-                            );
+                            // window.history.replaceState(
+                            //   null,
+                            //   projects[activeIndex].name,
+                            //   `/${projects[activeIndex].slug}`,
+                            // );
                           }}
                         >
                           <p>Read More</p>
@@ -155,8 +155,14 @@ const Projects = () => {
 
                 <div className="h-64 overflow-hidden rounded-xl bg-body-light lg:h-full lg:flex-1">
                   <Video
-                    src={'/projects.mp4'}
-                    progress={Math.min(Math.max(scrollPosition / (windowDimensions.height * projects.length), 0), 1)}
+                    src={os === 'Android' ? projects[activeIndex].videoUrl : '/projects.mp4'}
+                    progress={
+                      os !== 'Android'
+                        ? Math.min(Math.max(scrollPosition / (windowDimensions.height * projects.length), 0), 1)
+                        : undefined
+                    }
+                    isScrollControlled={os !== 'Android'}
+                    isLooped={os === 'Android'}
                   />
                 </div>
               </div>
@@ -169,7 +175,7 @@ const Projects = () => {
         isOpen={isOpen}
         onClose={() => {
           onClose();
-          window.history.replaceState(null, 'Raharditya', '/');
+          // window.history.replaceState(null, 'Raharditya', '/');
         }}
       />
     </>
