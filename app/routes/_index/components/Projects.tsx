@@ -137,11 +137,11 @@ const Projects = () => {
                           transition={{ delay: 0.7 }}
                           onClick={() => {
                             onOpen(projects[activeIndex].slug);
-                            // window.history.replaceState(
-                            //   null,
-                            //   projects[activeIndex].name,
-                            //   `/${projects[activeIndex].slug}`,
-                            // );
+                            window.history.replaceState(
+                              null,
+                              projects[activeIndex].name,
+                              `/${projects[activeIndex].slug}`,
+                            );
                           }}
                         >
                           <p>Read More</p>
@@ -175,7 +175,7 @@ const Projects = () => {
         isOpen={isOpen}
         onClose={() => {
           onClose();
-          // window.history.replaceState(null, 'Raharditya', '/');
+          window.history.replaceState(null, 'Raharditya', '/');
         }}
       />
     </>
