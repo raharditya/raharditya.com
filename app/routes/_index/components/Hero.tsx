@@ -1,13 +1,13 @@
 import CTA from '../../../components/CTA';
 import Container from '../../../components/Container';
-import SVGMorprh from '~/components/SVGMorph';
-import { blob1, blob2, blob3, blob4, blob5 } from '~/lib/data/blobPaths';
-import { getCurrentBreakpoint } from '~/lib/helper';
-import useUserAgent from '~/lib/hooks/useUserAgent';
+// import SVGMorprh from '~/components/SVGMorph';
+// import { blob1, blob2, blob3, blob4, blob5 } from '~/lib/data/blobPaths';
+// import { getCurrentBreakpoint } from '~/lib/helper';
+// import useUserAgent from '~/lib/hooks/useUserAgent';
 
 const Hero = () => {
-  const breakpoint = getCurrentBreakpoint();
-  const [browser, _] = useUserAgent();
+  // const breakpoint = getCurrentBreakpoint();
+  // const [browser, _] = useUserAgent();
 
   return (
     <div className="hero-bg">
@@ -37,7 +37,7 @@ const Hero = () => {
             <CTA className="bg-white hover:brightness-90 hover:filter" />
           </div>
 
-          {breakpoint !== 'sm' && (
+          {/* {breakpoint !== 'sm' && (
             <svg
               width="656"
               height="608"
@@ -52,7 +52,7 @@ const Hero = () => {
                 <SVGMorprh paths={[blob1, blob2, blob3, blob4, blob5, blob1]} />
               )}
             </svg>
-          )}
+          )} */}
         </div>
       </Container>
     </div>
